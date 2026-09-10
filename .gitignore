@@ -1,0 +1,15 @@
+node_modules/
+cockpit/node_modules/
+*.log
+*.tmp
+.env
+.env.local
+.DS_Store
+Thumbs.db
+coverage/
+dist/
+scratch/
+cockpit/orchestrator_inbox.jsonl
+cockpit/interactions.jsonl
+__pycache__/
+*.pyc
