@@ -24,13 +24,18 @@
 
 ---
 
-[Início Rápido](#8-in%C3%ADcio-r%C3%A1pido--instala%C3%A7%C3%A3o) • [Arquitetura](#2-a-matriz-multi-agente-dual-layer) • [Método Fundido](#3-gated-sdlc--o-m%C3%A9todo-fundido-de-trabalho) • [Anti-Slop](#4-as-20-zonas-can%C3%B4nicas-anti-ai-slop--design-system) • [Customização](#9-guia-de-customiza%C3%A7%C3%A3o-e-adapta%C3%A7%C3%A3o-sob-medida) • [Referências](#10-inspira%C3%A7%C3%B5es-fundacionais--refer%C3%AAncias-can%C3%B4nicas) • [Cockpit 2D](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentação](#11-%C3%ADndice-de-documenta%C3%A7%C3%A3o)
+[Início Rápido](#8-início-rápido--instalação) • [Arquitetura](#2-a-matriz-multi-agente-dual-layer) • [Método Fundido](#3-gated-sdlc--o-método-fundido-de-trabalho) • [Anti-Slop](#4-as-20-zonas-canônicas-anti-ai-slop--design-system) • [Customização](#9-guia-de-customização-e-adaptação-sob-medida) • [Manifesto](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md) • [Tutoriais](docs/08_STEP_BY_STEP_TUTORIALS.md) • [60 Referências](#10-inspirações-fundacionais--o-hall-da-fama-das-60-tecnologias) • [Cockpit 2D](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentação](#11-índice-de-documentação)
 
 </div>
 
 > [!NOTE]
 > **Edição Oficial em Português do Brasil:**  
-> Esta é a documentação completa e nativa em Português do Brasil do Antigravity Foundry. Se preferir a especificação internacional em inglês, acesse o [**`README.md`**](README.md). Manuais aprofundados, ADRs e guias operacionais estão disponíveis na pasta [`docs/`](docs/).
+> Esta é a documentação completa e nativa em Português do Brasil do Antigravity Foundry. Se preferir a especificação internacional em inglês, acesse o [**`README.md`**](README.md).
+> 
+> 🚀 **Destaques Imperdíveis da Versão 2.0:**
+> - 📜 **Manifesto da Trajetória:** Conheça a história e os 10 Mandamentos da Engenharia Agêntica em [**`docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md`**](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md).
+> - 🛠️ **Suíte de Tutoriais Passo a Passo:** Aprenda a rodar o ciclo completo do zero à produção em [**`docs/08_STEP_BY_STEP_TUTORIALS.md`**](docs/08_STEP_BY_STEP_TUTORIALS.md).
+> - 🏛️ **O Hall da Fama das 60 Tecnologias:** O compêndio de engenharia reversa das 7 Levas em [**`docs/00_FOUNDATIONAL_REFERENCES.md`**](docs/00_FOUNDATIONAL_REFERENCES.md).
 
 ---
 
@@ -352,35 +357,22 @@ Embora o Antigravity Foundry seja **100% plug-and-play e zero-config** para uso 
 
 ---
 
-## 🏛️ 10. Inspirações Fundacionais & Referências Canônicas
+## 🏛️ 10. Inspirações Fundacionais: O Hall da Fama das 60 Tecnologias
 
-O Antigravity Foundry foi construído sobre os ombros de gigantes do ecossistema open-source. Prestamos homenagem e rastreamos nossa arquitetura aos seguintes projetos canônicos:
+O Antigravity Foundry foi construído sobre os ombros de gigantes. Ele consolida **60 dos projetos e repositórios mais influentes do mundo** em IA agêntica, engenharia de software e cibersegurança, catalogados cronologicamente em **7 Levas de Pesquisa**:
 
-### Command Centers & Visual Multi-Agent Harnesses
-- [`chaitanyagiri/munder-difflin`](https://github.com/chaitanyagiri/munder-difflin) (`munderdiffl.in`): A inspiração do escritório 2D retro em pixel art, visualização lúdica de agentes e o padrão arquitetural *Single-Committer*.
-- [`herdrdev/herdr`](https://github.com/herdrdev/herdr): Multiplexador assíncrono de sessões e daemon de background para agentes autônomos.
-- [`ustoppble/overclick`](https://github.com/ustoppble/overclick): Quadro de tarefas autônomo, telemetria de tokens via MCP e rastreamento de steps.
+| Leva | Domínio Técnico | Qtd. | Destaques Canônicos |
+| :---: | :--- | :---: | :--- |
+| **Leva 1** | Fundamentos de IA, SDLC e Qualidade Web | 18 | `andrej-karpathy-skills`, `agent-skills` (Addy Osmani), `skills` (Matt Pocock Grill-Me), `Clean Code`, `hallmark` |
+| **Leva 2** | Cibersegurança Ofensiva, Core Web Vitals e Disciplina | 20 | `strix` (No exploit no report), `Anthropic-Cybersecurity-Skills` (MITRE F3), `unlazy` (Hard Gates), `critical` |
+| **Leva 3** | Harnesses e Softwares Executáveis | 5 | `munder-difflin` (Pixel Art Single-Committer), `claude-mem` (Progressive Disclosure), `VoltAgent` (Circuit Breaker) |
+| **Leva 4** | Loops Autônomos & Motores de Execução | 4 | `aiden` (Proof over Declared Done), `pi` (Supply-Chain Hardening), `ralph` (Fresh Context Loop) |
+| **Leva 5** | Servidores MCP de Alta Performance | 7 | `pagespeed-insights-mcp`, `dechonet-mcp`, `siteaudit-mcp`, `codebase-memory-mcp` (Tree-Sitter AST) |
+| **Leva 6** | Ecossistema Corporativo, Fiscal & Agentes | 5 | `dolibarr` (Pragmatismo ERP), `nfe.io` (Filas Assíncronas), `no-ai-slop` (Peter Yang), `agency-agents` |
+| **Leva 7** | Engenharia Documental e Automação Office | 1 | `OfficeCLI` (Automação CLI headless de `.docx`, `.xlsx`, `.pptx` sem suíte instalada) |
+| **TOTAL** | **Ecossistema Unificado Antigravity Foundry** | **60** | **O Estado da Arte Global em Engenharia Agêntica** |
 
-### SDLC Gated, Protocolos Socráticos & Prompt Engineering
-- [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills): Addy Osmani (Google Chrome) — Metodologia Spec-Driven Development (SDD), planos de implementação formais e entregas com portões.
-- [`mattpocock/skills`](https://github.com/mattpocock/skills): Matt Pocock — O Protocolo Socrático *Grill-Me* desafiando casos de borda, RBAC e critérios de sucesso antes de codificar.
-- [`multica-ai/andrej-karpathy-skills`](https://github.com/multica-ai/andrej-karpathy-skills): Andrej Karpathy — As 4 Leis Comportamentais (*Think Before Coding, Simplicity First / YAGNI, Surgical Changes, Goal-Driven Execution*).
-- **Robert C. Martin (Uncle Bob):** *Clean Code* & *Clean Architecture* — Princípios SOLID, funções atômicas de responsabilidade única e blindagem defensiva.
-- [`Leonxlnx/unlazy`](https://github.com/Leonxlnx/unlazy): Disciplina determinística de conclusão com portões executáveis (`GATES.md`) com validação de código de saída `0`.
-
-### Design System & Erradicação de AI Slop
-- [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill), [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) & [`petergyang/no-ai-slop`](https://github.com/petergyang/no-ai-slop): As heurísticas de caça ao AI Slop (banimento de gradientes roxos/azuis, bordas neon, emojis em títulos, transparências borradas; imposição de botões sólidos e numerais tabulares).
-- [`thedaviddias/Front-End-Checklist`](https://github.com/thedaviddias/Front-End-Checklist): David Dias — Checklist de qualidade de interface, semântica web e acessibilidade WCAG 2.1 AA.
-- [`bradtraversy/design-resources-for-developers`](https://github.com/bradtraversy/design-resources-for-developers): Brad Traversy — Curadoria de tipografia suíça, paletas sólidas e ícones locais.
-
-### Arquitetura de Agentes Especialistas, Resiliência & Memória
-- [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents): Maciej Sitarzewski — Taxonomia global de personas de agentes em Markdown estruturado.
-- [`roedyrustam/vibes-plug`](https://github.com/roedyrustam/vibes-plug): Orquestração hierárquica e coordenação de subagentes com passagem de bastão estruturada.
-- [`VoltAgent/skills`](https://github.com/VoltAgent/skills): Fronteiras de erro, resiliência graciosa e circuit breakers de 3 rodadas no loop de auditoria.
-- [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem): Persistência de memória em multicamadas e progressive disclosure de contexto.
-- [`huytieu/COG-second-brain`](https://github.com/huytieu/COG-second-brain): Ciclo cognição ➔ Obsidian Vault ➔ Git Versioning.
-
-👉 **Compêndio Completo do Hall da Fama:** Leia [**`docs/00_FOUNDATIONAL_REFERENCES.md`**](docs/00_FOUNDATIONAL_REFERENCES.md) com narrativas de impacto e matriz de rastreabilidade.
+👉 **Compêndio Completo das 60 Tecnologias:** Leia [**`docs/00_FOUNDATIONAL_REFERENCES.md`**](docs/00_FOUNDATIONAL_REFERENCES.md) com análise minuciosa de cada autor, conceito primordial e matriz de rastreabilidade completa.
 
 ---
 
@@ -389,13 +381,15 @@ O Antigravity Foundry foi construído sobre os ombros de gigantes do ecossistema
 O repositório inclui uma suíte completa e modular de documentação técnica localizada nas pastas [`docs/`](docs/) e [`templates/`](templates/):
 
 ### Manuais Técnicos Oficiais
-- **[`docs/00_FOUNDATIONAL_REFERENCES.md`](docs/00_FOUNDATIONAL_REFERENCES.md)**: Compêndio oficial do Hall da Fama, linhagem open-source e matriz de rastreabilidade.
+- **[`docs/00_FOUNDATIONAL_REFERENCES.md`](docs/00_FOUNDATIONAL_REFERENCES.md)**: Compêndio oficial do Hall da Fama das 60 tecnologias, linhagem open-source e matriz de rastreabilidade.
 - **[`docs/01_ARCHITECTURE.md`](docs/01_ARCHITECTURE.md)**: Imersão profunda no modelo mental Dual-Layer, mecânica de orquestração e segregação de papéis.
 - **[`docs/02_THE_GATED_SDLC.md`](docs/02_THE_GATED_SDLC.md)**: Detalhamento das 5 etapas do Método Fundido, contratos de portão e critérios de saída.
 - **[`docs/03_AGENT_MATRIX.md`](docs/03_AGENT_MATRIX.md)**: Fichas técnicas completas de todos os subagentes, ferramentas autorizadas e personas.
 - **[`docs/04_SKILLS_CATALOG.md`](docs/04_SKILLS_CATALOG.md)**: Manual exaustivo de todas as 18 skills universais `/slash` com exemplos práticos.
 - **[`docs/05_COCKPIT_GUIDE.md`](docs/05_COCKPIT_GUIDE.md)**: Guia operacional do Cockpit 2D em Pixel Art, sintetizador Web Audio e telemetria SSE.
 - **[`docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md`](docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md)**: Guia definitivo para customizar regras, workers, verifiers e skills para a sua própria stack.
+- **[`docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md`](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md)**: **O Manifesto Épico:** Da falácia dos chats monolíticos à fábrica autônoma, com os 10 Mandamentos da Engenharia Agêntica.
+- **[`docs/08_STEP_BY_STEP_TUTORIALS.md`](docs/08_STEP_BY_STEP_TUTORIALS.md)**: **Tutoriais Práticos Passo a Passo:** Setup em 2 min, ciclo Gated SDLC de ponta a ponta, adaptação de stacks e uso do Cockpit 2D.
 
 ### Templates Canônicos de Governança
 - **[`templates/implementation_plan_template.md`](templates/implementation_plan_template.md)**: Modelo padrão de especificação técnica e plano de implementação.

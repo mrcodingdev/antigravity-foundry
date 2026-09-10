@@ -24,13 +24,18 @@
 
 ---
 
-[Quick Start](#8-quick-start--installation) • [Architecture](#2-the-dual-layer-multi-agent-matrix) • [Gated SDLC](#3-gated-sdlc--the-fused-method) • [Customization](#10-customization--adaptation-guide) • [References](#11-foundational-inspirations--canonical-references) • [2D Cockpit](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentation](#9-documentation-index)
+[Quick Start](#8-quick-start--installation) • [Architecture](#2-the-dual-layer-multi-agent-matrix) • [Gated SDLC](#3-gated-sdlc--the-fused-method) • [Customization](#10-customization--adaptation-guide) • [Manifesto](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md) • [Tutorials](docs/08_STEP_BY_STEP_TUTORIALS.md) • [60 References](#10-foundational-inspirations-the-hall-of-fame-of-60-technologies) • [2D Cockpit](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentation](#11-documentation-index)
 
 </div>
 
 > [!NOTE]
 > **Multilingual Documentation Available:**  
-> This specification is presented in English. A complete native Brazilian Portuguese version is available at [**`README.pt-BR.md`**](README.pt-BR.md), and in-depth technical handbooks, Architectural Decision Records, and operational guides are provided in the [`docs/`](docs/) directory.
+> This specification is presented in English. A complete native Brazilian Portuguese version is available at [**`README.pt-BR.md`**](README.pt-BR.md).
+> 
+> 🚀 **Version 2.0 Major Highlights:**
+> - 📜 **The Journey & Manifesto:** Discover the origin story and The 10 Commandments of Agentic Engineering in [**`docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md`**](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md).
+> - 🛠️ **Step-by-Step Tutorial Suite:** From zero to production in 2 minutes, end-to-end Gated SDLC run, and stack customization in [**`docs/08_STEP_BY_STEP_TUTORIALS.md`**](docs/08_STEP_BY_STEP_TUTORIALS.md).
+> - 🏛️ **The Hall of Fame of 60 Technologies:** Exhaustive reverse-engineering across 7 Research Waves in [**`docs/00_FOUNDATIONAL_REFERENCES.md`**](docs/00_FOUNDATIONAL_REFERENCES.md).
 
 ---
 
@@ -354,35 +359,22 @@ While Antigravity Foundry is **100% plug-and-play and zero-config** for immediat
 
 ---
 
-## 🏛️ 10. Foundational Inspirations & Canonical References
+## 🏛️ 10. Foundational Inspirations: The Hall of Fame of 60 Technologies
 
-Antigravity Foundry stands on the shoulders of open-source giants. We proudly attribute and trace our core architectural pillars to the following groundbreaking projects:
+Antigravity Foundry stands on the shoulders of open-source giants. It consolidates **60 of the most influential repositories and projects worldwide** in agentic AI, software engineering, and cybersecurity, categorized across **7 Research Waves**:
 
-### Visual Multi-Agent Harnesses & Cockpit
-- [`chaitanyagiri/munder-difflin`](https://github.com/chaitanyagiri/munder-difflin) (`munderdiffl.in`): The primordial 2D retro pixel-art office simulation, live agent wandering, and the Single-Committer architectural pattern.
-- [`herdrdev/herdr`](https://github.com/herdrdev/herdr): Asynchronous session multiplexer and daemon background scheduler for autonomous agent swarms.
-- [`ustoppble/overclick`](https://github.com/ustoppble/overclick): Autonomous task boards, MCP token telemetry, and step tracking.
+| Wave | Technical Domain | Qty | Canonical Highlights |
+| :---: | :--- | :---: | :--- |
+| **Wave 1** | AI Foundations, SDLC & Web Quality | 18 | `andrej-karpathy-skills`, `agent-skills` (Addy Osmani), `skills` (Matt Pocock Grill-Me), `Clean Code`, `hallmark` |
+| **Wave 2** | Offensive Security, Core Web Vitals & Discipline | 20 | `strix` (No exploit no report), `Anthropic-Cybersecurity-Skills` (MITRE F3), `unlazy` (Hard Gates), `critical` |
+| **Wave 3** | Executable Software & Multi-Agent Harnesses | 5 | `munder-difflin` (Pixel Art Single-Committer), `claude-mem` (Progressive Disclosure), `VoltAgent` (Circuit Breaker) |
+| **Wave 4** | Autonomous Loops & Execution Engines | 4 | `aiden` (Proof over Declared Done), `pi` (Supply-Chain Hardening), `ralph` (Fresh Context Loop) |
+| **Wave 5** | High-Performance MCP Servers | 7 | `pagespeed-insights-mcp`, `dechonet-mcp`, `siteaudit-mcp`, `codebase-memory-mcp` (Tree-Sitter AST) |
+| **Wave 6** | Enterprise Ecosystem, Fiscal & Personas | 5 | `dolibarr` (ERP Pragmatism), `nfe.io` (Async Queues), `no-ai-slop` (Peter Yang), `agency-agents` |
+| **Wave 7** | Document Engineering & Office Automation | 1 | `OfficeCLI` (Headless CLI automation for `.docx`, `.xlsx`, `.pptx` without Office installed) |
+| **TOTAL** | **Antigravity Foundry Unified Ecosystem** | **60** | **The Global State-of-the-Art in Agentic Engineering** |
 
-### SDLC Governance, Socratic Protocols & Prompt Engineering
-- [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills): Addy Osmani (Google Chrome) — Spec-Driven Development (SDD), formal implementation plans, and gated milestone delivery.
-- [`mattpocock/skills`](https://github.com/mattpocock/skills): Matt Pocock — The Socratic *Grill-Me Protocol* interrogating edge cases, RBAC, and acceptance criteria before code is written.
-- [`multica-ai/andrej-karpathy-skills`](https://github.com/multica-ai/andrej-karpathy-skills): Andrej Karpathy — The 4 Behavioral Laws (*Think Before Coding, Simplicity First / YAGNI, Surgical Changes, Goal-Driven Execution*).
-- **Robert C. Martin (Uncle Bob):** *Clean Code* & *Clean Architecture* — Single Responsibility Principle, self-documenting code, and zero side-effects.
-- [`Leonxlnx/unlazy`](https://github.com/Leonxlnx/unlazy): Deterministic completion discipline via runnable gate contracts (`GATES.md`) with exit code `0` validation.
-
-### Design System & AI Slop Eradication
-- [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill), [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) & [`petergyang/no-ai-slop`](https://github.com/petergyang/no-ai-slop): The canonical 20 anti-slop guardrails (banishing purple-to-blue gradients, neon borders, header emojis, blurred glassmorphism; enforcing solid buttons and tabular numerals).
-- [`thedaviddias/Front-End-Checklist`](https://github.com/thedaviddias/Front-End-Checklist): David Dias — Web quality checklist, semantic HTML5, and WCAG 2.1 AA accessibility.
-- [`bradtraversy/design-resources-for-developers`](https://github.com/bradtraversy/design-resources-for-developers): Brad Traversy — Curated Swiss typography, solid corporate palettes, and local asset packaging.
-
-### Specialist Agent Matrix, Resilience & Memory
-- [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents): Maciej Sitarzewski — Structured Markdown persona taxonomy for AI agents.
-- [`roedyrustam/vibes-plug`](https://github.com/roedyrustam/vibes-plug): Hierarchical agent orchestration and structured handoff reports.
-- [`VoltAgent/skills`](https://github.com/VoltAgent/skills): Error boundaries, graceful degradation, and 3-round closed-loop circuit breakers.
-- [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem): Multi-layer persistent memory and progressive context disclosure.
-- [`huytieu/COG-second-brain`](https://github.com/huytieu/COG-second-brain): Cognitive lifecycle linking agent reasoning, Obsidian vaults, and git tracking.
-
-👉 **Complete Hall of Fame Compendium:** Read [**`docs/00_FOUNDATIONAL_REFERENCES.md`**](docs/00_FOUNDATIONAL_REFERENCES.md) for full attribution narratives and traceability matrices.
+👉 **Complete Compendium of all 60 Technologies:** Read [**`docs/00_FOUNDATIONAL_REFERENCES.md`**](docs/00_FOUNDATIONAL_REFERENCES.md) for full attribution narratives, primordial concepts, and comprehensive traceability matrices.
 
 ---
 
@@ -391,13 +383,15 @@ Antigravity Foundry stands on the shoulders of open-source giants. We proudly at
 The repository includes a comprehensive, modular documentation suite located in the [`docs/`](docs/) and [`templates/`](templates/) directories:
 
 ### Core Technical Handbooks
-- **[`docs/00_FOUNDATIONAL_REFERENCES.md`](docs/00_FOUNDATIONAL_REFERENCES.md)**: Official Hall of Fame compendium, open-source lineage, and traceability matrix.
+- **[`docs/00_FOUNDATIONAL_REFERENCES.md`](docs/00_FOUNDATIONAL_REFERENCES.md)**: Official Hall of Fame compendium of the 60 technologies, open-source lineage, and traceability matrix.
 - **[`docs/01_ARCHITECTURE.md`](docs/01_ARCHITECTURE.md)**: Deep dive into the Dual-Layer mental model, orchestration mechanics, and role segregation.
 - **[`docs/02_THE_GATED_SDLC.md`](docs/02_THE_GATED_SDLC.md)**: Detailed breakdown of the 5 phases of The Fused Method, gate contracts, and exit criteria.
 - **[`docs/03_AGENT_MATRIX.md`](docs/03_AGENT_MATRIX.md)**: Complete profiles for all subagents, authorized tools, and prompt architectures.
 - **[`docs/04_SKILLS_CATALOG.md`](docs/04_SKILLS_CATALOG.md)**: Exhaustive manual for all 18 universal `/slash` skills with syntax examples.
 - **[`docs/05_COCKPIT_GUIDE.md`](docs/05_COCKPIT_GUIDE.md)**: Operator runbook for the 2D Pixel Art Cockpit, Web Audio synthesizer, and SSE telemetry.
 - **[`docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md`](docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md)**: Definitive guide to customizing rules, workers, verifiers, and skills for your stack.
+- **[`docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md`](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md)**: **The Epic Manifesto:** From monolithic chat breakdown to the autonomous factory, featuring The 10 Commandments of Agentic Engineering.
+- **[`docs/08_STEP_BY_STEP_TUTORIALS.md`](docs/08_STEP_BY_STEP_TUTORIALS.md)**: **Hands-On Step-by-Step Tutorials:** 2-minute setup, full end-to-end Gated SDLC cycle, stack customization, and 2D Cockpit runbook.
 
 ### Enterprise Governance Templates
 - **[`templates/implementation_plan_template.md`](templates/implementation_plan_template.md)**: Canonical specification plan for new features.
