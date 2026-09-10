@@ -24,7 +24,7 @@
 
 ---
 
-[Início Rápido](#8-início-rápido--instalação) • [Arquitetura](#2-a-matriz-multi-agente-dual-layer) • [Método Fundido](#3-gated-sdlc--o-método-fundido-de-trabalho) • [Anti-Slop](#4-as-20-zonas-canônicas-anti-ai-slop--design-system) • [Customização](#9-guia-de-customização-e-adaptação-sob-medida) • [Manifesto](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md) • [Tutoriais](docs/08_STEP_BY_STEP_TUTORIALS.md) • [60 Referências](#10-inspirações-fundacionais--o-hall-da-fama-das-60-tecnologias) • [Cockpit 2D](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentação](#11-índice-de-documentação)
+[Início Rápido](#8-início-rápido--instalação) • [Zero-Overhead UX](#-ux-sem-sobrecarga-roteamento-proativo-automático-zero-comandos-manuais) • [Arquitetura](#2-a-matriz-multi-agente-dual-layer) • [Método Fundido](#3-gated-sdlc--o-método-fundido-de-trabalho) • [Anti-Slop](#4-as-20-zonas-canônicas-anti-ai-slop--design-system) • [Customização](#9-guia-de-customização-e-adaptação-sob-medida) • [Manifesto](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md) • [Tutoriais](docs/08_STEP_BY_STEP_TUTORIALS.md) • [60 Referências](#10-inspirações-fundacionais--o-hall-da-fama-das-60-tecnologias) • [Cockpit 2D](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentação](#11-índice-de-documentação)
 
 </div>
 
@@ -113,6 +113,25 @@ flowchart TB
     class V1,V2,V3,V4,V5,V6 verifier;
     class Production prod;
 ```
+
+---
+
+## ⚡ UX Sem Sobrecarga: Roteamento Proativo Automático (Zero Comandos Manuais)
+
+Em outros frameworks agênticos, você é forçado a memorizar dezenas de comandos `/slash` (`/spec`, `/grill`, `/clean-code`) ou invocar `@agentes` manualmente a cada etapa. No **Antigravity Foundry**, você não precisa virar operador de terminal: você conversa normalmente em **linguagem natural humana**.
+
+> [!TIP]
+> **Zero-Overhead UX (Roteamento Autônomo):** Em outros ecossistemas, você é forçado a lembrar dezenas de comandos `/slash` ou invocar `@agentes` manualmente. No Antigravity Foundry, você conversa normalmente em linguagem natural. O Maestro analisa sua intenção, ativa as skills certas no background e aciona a esteira de subagentes automaticamente. Menos atrito, máxima engenharia.
+
+### O Que Você Digita ➔ O Que o Foundry Faz Sozinho nos Bastidores
+
+| O Que Você Digita Casualmentente | O Que o Foundry Faz Sozinho nos Bastidores |
+| :--- | :--- |
+| *"Adicione um campo de telefone com máscara na tela de clientes"* | 1. Ativa `spec-driven-development` e dispara Grill-Me socrático sobre validação e formato E.164.<br>2. Despacha `backend-engineer` para migration SQL DDL e endpoint REST.<br>3. Emite Contrato de Handoff e aciona `frontend-engineer` para input com tipografia acessível.<br>4. Convoca os 6 Verifiers para auditoria unânime antes do commit. |
+| *"Deu erro 500 no login ao enviar token expirado"* | 1. Ativa `debugging-and-error-recovery` (análise de causa-raiz em 6 passos).<br>2. Despacha `backend-engineer` para criar teste de regressão que reproduz a falha.<br>3. Aplica tratamento limpo com `401 Unauthorized` tipado e sem vazamento de stacktrace.<br>4. Submete a `security-auditor` e `test-engineer` com exit code `0`. |
+| *"Precisa criar uma tabela de fornecedores vinculada a compras"* | 1. Ativa `database-migrations-sql-migrations` e `database-optimizer`.<br>2. `backend-engineer` formula migration idempotente com índices, foreign keys e rollback reversível.<br>3. `enterprise-architect` audita integridade relacional e limites de domínio. |
+| *"Os cards do dashboard estão desalinhados e o botão salvar sumiu"* | 1. Ativa `frontend-ui-engineering` e `anti-slop-ui-auditor`.<br>2. `frontend-engineer` ajusta layout com CSS Grid/Flexbox e foco visível.<br>3. Auditor avalia contraste WCAG 2.1 AA (> 4.5:1) e erradica vícios visuais de IA. |
+| *"Terminamos a feature, pode commitar e enviar"* | 1. Roda a suíte completa de testes (`test-engineer`).<br>2. Inspeciona conformidade Clean Code e complexidade ciclomática (`code-reviewer`).<br>3. Executa `pre_commit_secrets_shield.py` garantindo zero vazamento de chaves.<br>4. Despacha commit semântico formatado (`feat: ...`). |
 
 ---
 

@@ -24,7 +24,7 @@
 
 ---
 
-[Quick Start](#8-quick-start--installation) • [Architecture](#2-the-dual-layer-multi-agent-matrix) • [Gated SDLC](#3-gated-sdlc--the-fused-method) • [Customization](#10-customization--adaptation-guide) • [Manifesto](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md) • [Tutorials](docs/08_STEP_BY_STEP_TUTORIALS.md) • [60 References](#10-foundational-inspirations-the-hall-of-fame-of-60-technologies) • [2D Cockpit](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentation](#11-documentation-index)
+[Quick Start](#8-quick-start--installation) • [Zero-Overhead UX](#-zero-overhead-ux-proactive-autonomous-routing-no-manual-commands-required) • [Architecture](#2-the-dual-layer-multi-agent-matrix) • [Gated SDLC](#3-gated-sdlc--the-fused-method) • [Customization](#10-customization--adaptation-guide) • [Manifesto](docs/07_THE_FOUNDRY_JOURNEY_AND_MANIFESTO.md) • [Tutorials](docs/08_STEP_BY_STEP_TUTORIALS.md) • [60 References](#10-foundational-inspirations-the-hall-of-fame-of-60-technologies) • [2D Cockpit](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentation](#11-documentation-index)
 
 </div>
 
@@ -113,6 +113,25 @@ flowchart TB
     class V1,V2,V3,V4,V5,V6 verifier;
     class Production prod;
 ```
+
+---
+
+## ⚡ Zero-Overhead UX: Proactive Autonomous Routing (No Manual Commands Required)
+
+In conventional agentic frameworks, you are forced to memorize dozens of `/slash` commands (`/spec`, `/grill`, `/clean-code`) or manually summon `@agents` at every step. In **Antigravity Foundry**, you don't need to act as a command-line terminal operator: you interact naturally in **human natural language**.
+
+> [!TIP]
+> **Zero-Overhead UX (Autonomous Routing):** In other frameworks, you are forced to memorize dozens of `/slash` commands or invoke `@agents` manually. In Antigravity Foundry, you converse normally in natural language. The Maestro analyzes your intent, activates the right skills in the background, and automatically triggers the worker and verifier pipelines. Less cognitive friction, maximum software engineering.
+
+### What You Type ➔ What Foundry Does Behind the Scenes
+
+| What You Casually Type | What Foundry Autonomously Executes Behind the Scenes |
+| :--- | :--- |
+| *"Add a masked phone number field to the customer registration page"* | 1. Proactively activates `spec-driven-development` and initiates Socratic Grill-Me on E.164 formatting and uniqueness.<br>2. Dispatches `backend-engineer` for SQL DDL migration and REST endpoint.<br>3. Generates Handoff Contract and summons `frontend-engineer` for accessible input.<br>4. Calls all 6 Verifiers for unanimous gate audit before committing. |
+| *"Got a 500 error on login when sending an expired JWT token"* | 1. Proactively triggers `debugging-and-error-recovery` (6-step root cause analysis).<br>2. Dispatches `backend-engineer` to write a failing regression test replicating the bug.<br>3. Applies clean error handling returning typed `401 Unauthorized` without stack trace leakage.<br>4. Verifies resolution with `security-auditor` and `test-engineer` (exit code `0`). |
+| *"Need to create a suppliers table linked to purchase orders"* | 1. Activates `database-migrations-sql-migrations` and `database-optimizer`.<br>2. `backend-engineer` crafts idempotent migration with foreign keys, indexes, and reversible rollback.<br>3. `enterprise-architect` validates relational integrity and domain boundaries. |
+| *"Dashboard cards are misaligned and the save button is missing"* | 1. Activates `frontend-ui-engineering` and `anti-slop-ui-auditor`.<br>2. `frontend-engineer` aligns layout using modern CSS Grid/Flexbox and visible focus states.<br>3. Auditor checks WCAG 2.1 AA contrast (> 4.5:1) and eliminates AI visual artifacts. |
+| *"Feature complete, go ahead and commit and ship"* | 1. Runs entire automated test suite (`test-engineer`).<br>2. Audits Clean Code compliance and cyclomatic complexity (`code-reviewer`).<br>3. Executes `pre_commit_secrets_shield.py` ensuring zero leaked API keys.<br>4. Emits conventional semantic commit (`feat: ...`). |
 
 ---
 

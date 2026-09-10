@@ -8,16 +8,24 @@
 
 ## 1. Visão Geral do Sistema de Skills
 
-As **Skills Universais** do Antigravity Foundry são procedimentos padronizados que podem ser acionados pelo operador humano via comandos de atalho (`/skill`) ou disparados autonomamente pelo Orquestrador Central durante o ciclo de vida do software.
+As **Skills Universais** do Antigravity Foundry são procedimentos operacionais padronizados (SOP) que encapsulam as melhores práticas de engenharia de software do ecossistema.
+
+> [!IMPORTANT]
+> ### ⚡ NOTA DE GOVERNANÇA: ZERO-OVERHEAD UX & ATIVAÇÃO AUTÔNOMA
+> Embora todas as 18 skills universais catalogadas abaixo possuam comandos com barra (`/skill`) como atalho opcional para fins de referência e documentação, a **forma CANÔNICA de operação no Antigravity Foundry é a ativação 100% autônoma pelo Orquestrador Maestro**.
+> 
+> O desenvolvedor humano **NUNCA é obrigado a memorizar ou digitar `/comandos`**. Ao expressar sua demanda em linguagem natural casual (ex.: *"adicione um campo de telefone na tela de clientes"*, *"deu erro 500 no checkout"*, *"crie a tabela de fornecedores"*), o componente **Intent Router & Autonomous Dispatcher** do Maestro analisa a intenção em background, seleciona a skill adequada e despacha a esteira de Workers e Verifiers automaticamente.
 
 ```mermaid
-graph TD
-    User["Operador / Humano"] -->|"Comando /skill"| Orch["antigravity-orchestrator"]
-    Orch -->|"Executa Procedimento"| SkillHub{"Central de 18 Skills"}
-    SkillHub --> S1["Planejamento: /spec, /socratic-grill, /adr"]
-    SkillHub --> S2["Construção: /backend-scaffold, /frontend-component, /database-migration"]
-    SkillHub --> S3["Auditoria: /clean-code, /cybersecurity-audit, /perf-audit, /gates-check"]
-    SkillHub --> S4["Encerramento: /test-runner, /walkthrough, /semantic-commit"]
+flowchart TD
+    User["Operador Humano"] -->|"Linguagem Natural (Canônica / Sem Atrito)"| Router["Intent Router & Autonomous Dispatcher"]
+    User -.->|"Comando /skill (Atalho Opcional)"| Orch["antigravity-orchestrator (Maestro)"]
+    Router --> Orch
+    Orch -->|"Ativação Proativa em Background"| SkillHub{"Central de 18 Skills"}
+    SkillHub --> S1["Planejamento: spec, socratic-grill, adr"]
+    SkillHub --> S2["Construção: backend-scaffold, frontend-component, database-migration"]
+    SkillHub --> S3["Auditoria: clean-code, cybersecurity-audit, perf-audit, gates-check"]
+    SkillHub --> S4["Encerramento: test-runner, walkthrough, semantic-commit"]
 ```
 
 ---

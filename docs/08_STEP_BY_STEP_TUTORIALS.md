@@ -95,23 +95,30 @@ flowchart LR
     F5 --> F6["Release:<br/>Commit Semântico"]
 ```
 
-### Passo 1: Invocando o Maestro e Ativando a Fase 0 (Grill-Me Socrático)
-O desenvolvedor abre o ambiente e solicita:  
-`"Maestro, precisamos criar um módulo de Ordens de Serviço com status, valor e exportação."`
+### Passo 1: Solicitação Casual em Linguagem Natural (Zero-Overhead UX)
+O desenvolvedor humano **não precisa memorizar comandos de barra (`/slash`) nem convocar subagentes manualmente (`@agente`)**. Ele simplesmente digita uma mensagem casual em português no chat:
 
-O `antigravity-orchestrator` **NÃO começa a programar imediatamente**. Ele dispara o **Protocolo Grill-Me**:
+> **Desenvolvedor Humano:**  
+> *"Maestro, precisamos adicionar um campo de telefone na tela de cadastro de clientes com validação e máscara, e persistir no banco."*
 
-> **Pergunta do Maestro:**
-> 1. *Casos de Borda:* O que acontece se uma ordem for concluída sem itens vinculados ou com valor zerado?
-> 2. *Controle de Acesso (RBAC):* Usuários com perfil 'Operador' podem alterar o status para 'Faturado', ou essa ação é restrita a 'Gerente'?
-> 3. *Interface & UX:* A listagem deve suportar paginação no servidor ou scroll infinito com virtualização?
-> 4. *Resiliência de Rede:* Se a exportação em PDF/Excel falhar no backend, o usuário deve receber notificação toast com re-tentativa?
-> 5. *Critérios de Aceite:* Quais são os testes automatizados mandatórios para considerar a entrega aprovada?
+#### O que o Maestro faz sozinho nos bastidores (Intent Router & Autonomous Dispatcher):
+1. O **Intent Router** analisa a semântica da mensagem em background e classifica:  
+   `Intenção = Nova Feature (Persistência DDL + API REST + UI Frontend)`.
+2. O Maestro **não gera código às cegas** e não exige que o desenvolvedor lembre de digitar `/metodo-fundido` ou `/spec`. Ele ativa proativamente em segundo plano as skills `spec-driven-development` e `planning-and-task-breakdown`, acionando a bateria socrática do **Protocolo Grill-Me Socrates**:
 
-O desenvolvedor responde a cada ponto, fornecendo as regras de negócio inequívocas.
+> **Orquestrador Maestro (Resposta Proativa Automática):**  
+> *"Perfeito! Mapeei a demanda. Como envolve alteração de schema SQL, endpoint de API e interface de usuário, ativei o protocolo de especificação técnica. Antes de despachar os Workers, preciso clarificar 4 invariantes de negócio:*  
+> 1. **Formato & Validação:** O telefone deve seguir formato internacional E.164 (`+55 11 98765-4321`) ou apenas nacional com DDD (10 ou 11 dígitos)?  
+> 2. **Integridade de Banco:** O campo pode ser nulo para clientes legados? Devemos aplicar índice `UNIQUE` para evitar cadastros duplicados?  
+> 3. **Comportamento UI:** A máscara deve formatar dinamicamente enquanto o usuário digita no padrão Swiss Design (sem pular o cursor)?  
+> 4. **Acessibilidade:** Devemos incluir suporte a leitores de tela (`aria-label`, `aria-invalid`) e validação no evento `onBlur`?"*
 
-### Passo 2: Fase 1 & 2 (ADR e Spec-Driven Implementation Plan)
-Com as respostas em mãos, o Maestro instrui o registro da decisão arquitetural e formula o plano de especificação técnica usando o template canônico:
+O desenvolvedor responde casualmente:
+> **Desenvolvedor Humano:**  
+> *"Padrão nacional com DDD, opcional para legados mas único se informado, máscara dinâmica sem lag e acessibilidade WCAG completa."*
+
+### Passo 2: Geração Autônoma da Formal Spec & Implementation Plan
+Sem que o humano precise solicitar `/spec`, o Maestro compila os requisitos, define o plano técnico e instancia as tarefas atômicas:
 
 1. **Criação do ADR:** `docs/adr/0004-service-orders-state-machine.md` definindo a máquina de estados das ordens (`DRAFT` ➔ `PENDING` ➔ `IN_PROGRESS` ➔ `COMPLETED` ➔ `BILLED`).
 2. **Criação do SDD Plan:** `templates/implementation_plan_template.md` instanciado com a WBS detalhada:

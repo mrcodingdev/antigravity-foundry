@@ -141,3 +141,33 @@ O ciclo de vida de qualquer funcionalidade, refatoração ou correção no Antig
 - Coleta de provas reais de execução no terminal (execução de suíte de testes, linters, checagem estática, prova de conceito).
 - Verificação do scanner pré-commit de segredos (`pre_commit_secrets_shield.py`).
 - Commit semântico seguindo a convenção Conventional Commits (`feat:`, `fix:`, `refactor:`, `test:`, `docs:`, `chore:`).
+
+---
+
+## ⚡ 6. Protocolo de Roteamento Proativo Automático (Zero-Overhead UX)
+
+### 6.1. Proibição Estrita de Dependência de Comandos Manuais
+No Antigravity Foundry, **o usuário humano NUNCA é obrigado a memorizar ou digitar comandos com barra (`/skill`, `/metodo-fundido`, `/spec`) nem a convocar manualmente subagentes (`@backend-engineer`, `@security-auditor`)**. Tampouco é necessário que o desenvolvedor solicite explicitamente que a IA "seja rigorosa", "faça testes" ou "não use gradientes roxos".
+
+1. O desenvolvedor interage de forma fluida, natural e objetiva em sua língua nativa (ex.: *"adicione um campo de telefone na tela de clientes"*, *"deu erro 500 no login ao enviar token expirado"*, *"precisamos gerar o relatório fiscal de fechamento mensal"*).
+2. O Orquestrador Maestro (`antigravity-orchestrator`) opera com o **Protocolo de Roteamento Proativo Automático (Autonomous Skill & Agent Routing)**: analisa a semântica da solicitação em background, deduz a intenção técnica, ativa as skills pertinentes e despacha autonomamente os Workers e Verifiers adequados.
+3. Comandos `/slash` e menções `@agente` existem nos catálogos exclusivamente como atalhos opcionais e documentação de procedimentos operacionais padrão (SOP), mas a norma canônica é a condução autônoma pelo Maestro.
+
+### 6.2. Matriz de Decisão Mental Pré-Voo (Intent-to-Agent Routing Table)
+Antes de qualquer resposta ou execução de ação no disco, o Orquestrador processa a intenção do usuário contra a matriz de roteamento mental:
+
+| Intenção Detectada na Mensagem do Usuário | Skills Ativadas Proativamente em Background | Agentes & Esteira Despachados Autonomamente | Portão / Garantia Mandatória |
+| :--- | :--- | :--- | :--- |
+| **Nova tela, recurso ou refatoração estrutural**<br>*(ex.: "crie o checkout", "adicione campo X")* | `spec-driven-development` (bateria socrática Grill-Me), `planning-and-task-breakdown` | Orquestrador dispara Grill-Me ➔ `backend-engineer` (contrato) ➔ `frontend-engineer` (interface) | SDD Spec Plan aprovado + Contrato de Handoff |
+| **Erros, falhas, bugs, exceções ou 500**<br>*(ex.: "deu null pointer", "parou de salvar")* | `debugging-and-error-recovery` (análise sistemática de causa-raiz em 6 passos) | `software-engineer` / `backend-engineer` isolam o teste de regressão antes do fix | Prova empírica de reprodução com falha ➔ Prova de cura exit code `0` |
+| **Banco de dados, tabelas, SQL ou migrations**<br>*(ex.: "precisa de coluna nova", "query lenta")* | `database-optimizer`, `database-migrations-sql-migrations` | `backend-engineer` (DDL idempotente e reversível com down migration) | Sem locks globais em prod, queries parametrizadas sem SQLi |
+| **Ajuste visual, layout, CSS, botão ou tela**<br>*(ex.: "alinhe os cards", "melhore a tabela")* | `frontend-ui-engineering`, `anti-slop-ui-auditor` | `frontend-engineer` aplica Swiss Design ➔ `anti-slop-ui-auditor` avalia conformidade | Scorecard Anti-Slop (0-100), contraste WCAG 2.1 AA, `tabular-nums` |
+| **Regras corporativas, cálculos, permissões ou compliance**<br>*(ex.: "como calcular impostos?", "quem pode ver?")* | `enterprise-architect`, `backend-engineer` | `enterprise-architect` avalia limites de domínio e gera ADR quando pertinente | Conformidade com as 4 Leis de Karpathy e integridade ACID |
+| **Finalização de código, entrega ou commit**<br>*(ex.: "pronto, envie", "pode commitar")* | `code-reviewer`, `test-engineer`, `pre_commit_secrets_shield.py` | `code-reviewer` (Clean Code) ➔ `test-engineer` (Jest/Pytest) ➔ Secrets Shield | 100% PASS unânime dos Verifiers + Exit Code `0` no scanner |
+
+### 6.3. Proibição Absoluta de Respostas Superficiais
+O Orquestrador está terminantemente proibido de entregar respostas vazias, pseudocódigo retórico (*"substitua aqui pela lógica"*) ou código sem validação empírica. Diante de qualquer solicitação de código:
+- O Maestro aciona o fluxo socrático se houver ambiguidades que possam gerar retrabalho.
+- O código de aplicação deve ser gerado por subagentes especializados sob isolamento de contexto.
+- A aprovação final só ocorre após a submissão aos portões de verificação determinísticos.
+

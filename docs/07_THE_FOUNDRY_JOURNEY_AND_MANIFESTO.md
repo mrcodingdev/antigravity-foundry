@@ -194,9 +194,9 @@ mindmap
     3. Segregação Absoluta Autor vs Auditor
     4. Maestro Soberano Sem Código
     5. Menos Código é Mais Inteligência (YAGNI)
-    6. Design Corporativo Repudia AI Slop
-    7. Segurança Ofensiva Real (No Exploit, No Report)
-    8. Acessibilidade e Latência Inegociáveis
+    6. Design Corporativo Anti-Slop & Performance
+    7. Zero-Overhead UX (Sem Digitar Prompts)
+    8. Segurança Ofensiva Real (No Exploit, No Report)
     9. Fresh Context & Memória Persistente
     10. Open-Source Universal e Livre (MIT)
 ```
@@ -216,14 +216,14 @@ O orquestrador existe para questionar, estruturar, decompor problemas e governar
 ### V. Menos Código é Mais Inteligência (As Leis de Karpathy)
 Repudiamos o inchaço de código e o excesso de bibliotecas. Cada linha adicionada é um passivo de manutenção futuro. Adotamos o princípio de YAGNI (*You Aren't Gonna Need It*) e mudanças cirúrgicas precisas.
 
-### VI. O Design Corporativo Repudia o AI Slop e o Falso-Futurismo
-Proibimos gradientes roxo-azulados, botões transparentes espelhados, emojis pueris em títulos H1/H2 e cartões borrados com glassmorphism. Construímos interfaces limpas, sólidas, tipograficamente suíças, com contraste real e numerais tabulares para visualização séria de dados.
+### VI. O Design Corporativo Repudia o AI Slop, a Latência e a Inacessibilidade
+Proibimos gradientes roxo-azulados, botões transparentes espelhados, emojis pueris em títulos H1/H2 e cartões borrados com glassmorphism. Construímos interfaces limpas, sólidas, tipograficamente suíças, com contraste real (WCAG 2.1 AA > 4.5:1), numerais tabulares para visualização séria de dados e Core Web Vitals impecáveis (LCP < 1.2s, INP < 50ms, CLS = 0).
 
-### VII. Segurança Não é Checklist Teórico — É "No Exploit, No Report"
-Não emitimos laudos de vulnerabilidades baseados em achismos. A auditoria de segurança exige comprovação empírica por meio de Proof-of-Concept reproduzível e remediação validada.
+### VII. O Desenvolvedor Não é Digitador de Prompts (Zero-Overhead UX)
+A IA deve ser inteligente o suficiente para saber quando ativar cada ferramenta, skill e auditoria sem exigir que o ser humano seja um operador de terminal de comandos. Em outros ecossistemas, o desenvolvedor é sobrecarregado pela obrigação de memorizar dezenas de `/skills` ou invocar `@agentes` manuais. No Foundry, o engenheiro humano dialoga em linguagem natural casual; o Maestro analisa a intenção em segundo plano e mobiliza a esteira de forma 100% autônoma. Menos atrito cognitivo, máxima engenharia de software.
 
-### VIII. Desempenho e Acessibilidade são Direitos Inalienáveis
-Interfaces lentas ou inacessíveis são defeitos arquiteturais graves. Exigimos Core Web Vitals no estado da arte (LCP < 1.2s, INP < 50ms, CLS = 0) e total navegabilidade por teclado e leitores de tela (WCAG 2.1 AA).
+### VIII. Segurança Não é Checklist Teórico — É "No Exploit, No Report"
+Não emitimos laudos de vulnerabilidades baseados em achismos. A auditoria de segurança exige comprovação empírica por meio de Proof-of-Concept reproduzível, sanitização estrita de inputs, blindagem contra OWASP Top 10 e remediação validada.
 
 ### IX. Memória Persistente e Sessões Limpas
 A janela de contexto de um agente de IA deve ser mantida o mais limpa e focada possível (*Progressive Disclosure*). A memória do projeto reside no disco — em planos de implementação, WBS, contratos de portão e registros de decisão (ADRs) — e não em históricos poluídos de chat.

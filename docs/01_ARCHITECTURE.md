@@ -40,10 +40,12 @@ O **Antigravity Foundry** resolve o colapso cognitivo separando formalmente a or
 
 ```mermaid
 flowchart TB
-    subgraph Layer1 ["CAMADA 1: GOVERNANÇA & ORQUESTRAÇÃO SOBERANA"]
+    subgraph Layer1 ["CAMADA 1: GOVERNANÇA SOBERANA & MAESTRO"]
         Maestro["antigravity-orchestrator<br/>(Agente Pai / Maestro Central)"]
+        Router["Intent Router & Autonomous Dispatcher<br/>(Zero-Overhead UX / Roteamento Proativo)"]
         State["Memória Global Persistente<br/>(Task State, Handshake, Brain)"]
         Cockpit["Antigravity Cockpit 2D<br/>(Telemetria Visual SSE & Áudio)"]
+        Maestro <--> Router
         Maestro <--> State
         Maestro --> Cockpit
     end
@@ -57,29 +59,32 @@ flowchart TB
 
     subgraph Layer2Verifiers ["CAMADA 2B: VERIFIERS GATEKEEPERS (AUDITORES INDEPENDENTES)"]
         direction LR
-        V1["chief-erp-architect<br/>(Governança & 4 Leis)"]
+        V1["enterprise-architect<br/>(Governança & 4 Leis)"]
         V2["code-reviewer<br/>(Clean Code & SOLID)"]
         V3["security-auditor<br/>(OWASP & Defesa)"]
         V4["test-engineer<br/>(Testes & Prova Real)"]
-        V5["performance-verifier<br/>(Latência & N+1)"]
-        V6["tech-writer-verifier<br/>(Walkthrough & Docs)"]
+        V5["web-performance-auditor<br/>(Latência & Core Web Vitals)"]
+        V6["anti-slop-ui-auditor<br/>(20 Zonas Anti-Slop & WCAG)"]
     end
 
-    Maestro ==>|"1. Despacha Tarefa Isolada"| Layer2Workers
+    Maestro ==>|"1. Despacha Tarefa Isolada via Intent Router"| Layer2Workers
     Layer2Workers ==>|"2. Entrega Código & Contrato"| Layer2Verifiers
-    Layer2Verifiers ==>|"3. Closed-Loop Re-Audit (Veredito)"| Maestro
+    Layer2Verifiers ==>|"3. Closed-Loop Re-Audit (Veredito 100% PASS)"| Maestro
 
     classDef orch fill:#6b21a8,stroke:#c084fc,stroke-width:2px,color:#fff;
     classDef worker fill:#1e40af,stroke:#60a5fa,stroke-width:2px,color:#fff;
     classDef verifier fill:#991b1b,stroke:#f87171,stroke-width:2px,color:#fff;
-    class Maestro,State,Cockpit orch;
+    class Maestro,Router,State,Cockpit orch;
     class W1,W2,W3 worker;
     class V1,V2,V3,V4,V5,V6 verifier;
 ```
 
 ### 2.1 Camada 1: Governança & Orquestração Soberana (Maestro Central)
 - **Agente Responsável:** `antigravity-orchestrator` (Agente Pai).
-- **Missão:** Centralizar o roadmap, planejar as sprints, quebrar tarefas em especificações formais, invocar os subagentes com contexto limpo e avaliar os vereditos dos auditores.
+- **Componente Central: Intent Router & Autonomous Dispatcher:**
+  - Módulo cognitivo de **Zero-Overhead UX**. Elimina completamente a necessidade do desenvolvedor humano memorizar ou digitar comandos com barra (`/skill`) ou convocar manualmente subagentes (`@backend-engineer`, `@security-auditor`).
+  - Processa a linguagem natural humana em tempo real, classifica a intenção de engenharia (Nova Feature, Bugfix/500, Database/Migration, Ajuste UI/CSS, Regras Corporativas, Commit) e ativa proativamente o procedimento e o subagente correspondente nos bastidores.
+- **Missão:** Centralizar o roadmap, planejar as sprints, conduzir o questionamento socrático (*Grill-Me*), quebrar tarefas em especificações formais, invocar os subagentes com contexto limpo e avaliar os vereditos dos auditores.
 - **Princípio Sagrado:** O Maestro nunca escreve código de produção diretamente. Ele delega aos Workers e submete os entregáveis aos Verifiers antes de qualquer commit.
 
 ### 2.2 Camada 2: Execução Desacoplada e Especializada
