@@ -99,7 +99,7 @@ class AgentScanner extends EventEmitter {
       {
         id: 'backend-engineer',
         name: 'Backend Engineer',
-        role: 'Especialista Backend & PDO MySQL',
+        role: 'Especialista Backend & APIs Robustas',
         room: 'development',
         deskCoord: { x: 12, y: 18 },
         color: '#f59e0b',
@@ -110,7 +110,7 @@ class AgentScanner extends EventEmitter {
       {
         id: 'frontend-engineer',
         name: 'Frontend Engineer',
-        role: 'Especialista Frontend & UI Bootstrap 5',
+        role: 'Especialista Frontend & UI Anti-Slop',
         room: 'development',
         deskCoord: { x: 18, y: 18 },
         color: '#ec4899',

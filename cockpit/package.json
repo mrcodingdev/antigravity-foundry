@@ -13,11 +13,11 @@
   "keywords": [
     "pixel-art",
     "antigravity",
-    "mrstock",
+    "command-center",
     "subagents",
     "dashboard",
     "sse"
   ],
-  "author": "MrStock ERP Frontline Engineering",
-  "license": "ISC"
+  "author": "Antigravity Foundry Core Team",
+  "license": "MIT"
 }

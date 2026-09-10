@@ -20,15 +20,17 @@
 [![Cockpit](https://img.shields.io/badge/Cockpit-2D%20Pixel%20Art%2060FPS-orange.svg)](#5-antigravity-office-2d-pixel-art-cockpit)
 [![Code Quality](https://img.shields.io/badge/Code%20Quality-100%25%20Clean%20Code-brightgreen.svg)](#3-gated-sdlc--the-fused-method)
 
+🌐 **Language:** English | [🇧🇷 Versão em Português do Brasil](README.pt-BR.md)
+
 ---
 
-[Quick Start](#8-quick-start--installation) • [Architecture](#2-the-dual-layer-multi-agent-matrix) • [Gated SDLC](#3-gated-sdlc--the-fused-method) • [20 Anti-Slop Rules](#4-20-anti-ai-slop-canonical-rules--design-system) • [2D Cockpit](#5-antigravity-office-2d-pixel-art-cockpit) • [Skills Catalog](#6-the-18-pure-core-skills-catalog) • [Documentation](#9-documentation-index)
+[Quick Start](#8-quick-start--installation) • [Architecture](#2-the-dual-layer-multi-agent-matrix) • [Gated SDLC](#3-gated-sdlc--the-fused-method) • [Customization](#10-customization--adaptation-guide) • [References](#11-foundational-inspirations--canonical-references) • [2D Cockpit](#5-antigravity-office-2d-pixel-art-cockpit) • [Documentation](#9-documentation-index)
 
 </div>
 
 > [!NOTE]
 > **Multilingual Documentation Available:**  
-> The core specification below is written in English for international distribution. Comprehensive technical handbooks, Architectural Decision Records, and operational walkthroughs in Portuguese (PT-BR) are fully available in the [`docs/`](docs/) directory.
+> This specification is presented in English. A complete native Brazilian Portuguese version is available at [**`README.pt-BR.md`**](README.pt-BR.md), and in-depth technical handbooks, Architectural Decision Records, and operational guides are provided in the [`docs/`](docs/) directory.
 
 ---
 
@@ -84,12 +86,12 @@ flowchart TB
 
     subgraph Layer2Verifiers ["LAYER 2B: VERIFIERS GATEKEEPERS (INDEPENDENT AUDITORS)"]
         direction LR
-        V1["chief-erp-architect<br/>(Governance & 4 Laws)"]
+        V1["enterprise-architect<br/>(Governance & 4 Laws)"]
         V2["code-reviewer<br/>(Clean Code & SOLID)"]
         V3["security-auditor<br/>(OWASP & Defense)"]
         V4["test-engineer<br/>(Edge Cases & Real Proof)"]
-        V5["performance-verifier<br/>(p95 Latency & N+1)"]
-        V6["tech-writer-verifier<br/>(Walkthrough & API Docs)"]
+        V5["web-performance-auditor<br/>(Core Web Vitals & Latency)"]
+        V6["anti-slop-ui-auditor<br/>(20 Anti-Slop Zones & WCAG)"]
     end
 
     Maestro ==>|"1. Dispatches Isolated Sub-Task"| Layer2Workers
@@ -118,13 +120,13 @@ Every agent in the Foundry has a defined cognitive scope, strict tool permission
 | **`antigravity-orchestrator`** | **Layer 1 (Maestro)** | Command Center | Roadmap governance, task decomposition, Socratic inquiry, gate enforcement, agent dispatch. | `send_message`, `manage_task`, `view_file`, `list_dir` | Conductor |
 | **`foundry-builder`** | **Layer 2A (Worker)** | Central Lab | Full-stack scaffolding, environment setup, cross-platform build scripts (`.ps1`, `.sh`, `.bat`), npm/pip package management. | `write_to_file`, `replace_file_content`, `run_command`, `manage_task`, `list_dir`, `view_file`, `grep_search`, `send_message` | Deliverable |
 | **`software-engineer`** | **Layer 2A (Worker)** | Development | Reactive web components, modern UI/UX, client-side state, API consumption, strict mobile/desktop responsiveness. | `write_to_file`, `replace_file_content`, `view_file`, `grep_search`, `generate_image`, `send_message` | Deliverable |
-| **`backend-engineer`** | **Layer 2A (Worker)** | Development | Enterprise REST APIs, strict PDO prepared statements, ACID transactions, pessimistic locking (`SELECT FOR UPDATE`), DDL migrations. | `write_to_file`, `replace_file_content`, `view_file`, `grep_search`, `run_command`, `send_message` | Deliverable |
-| **`chief-erp-architect`** | **Layer 2B (Verifier)** | Governance | Enforces the 4 Behavioral Laws of Andrej Karpathy, verifies domain boundaries, authors Architectural Decision Records (ADRs). | `view_file`, `grep_search`, `list_dir`, `send_message` | `PASS / REVISE` |
+| **`backend-engineer`** | **Layer 2A (Worker)** | Development | Enterprise REST APIs, strict parameterized prepared statements, ACID transactions, pessimistic locking (`SELECT FOR UPDATE`), DDL migrations. | `write_to_file`, `replace_file_content`, `view_file`, `grep_search`, `run_command`, `send_message` | Deliverable |
+| **`enterprise-architect`** | **Layer 2B (Verifier)** | Governance | Enforces the 4 Behavioral Laws of Andrej Karpathy, verifies domain boundaries, authors Architectural Decision Records (ADRs). | `view_file`, `grep_search`, `list_dir`, `send_message` | `PASS / REVISE` |
 | **`code-reviewer`** | **Layer 2B (Verifier)** | Governance | Robert C. Martin (Uncle Bob) Clean Code, SOLID principles, cyclomatic complexity (< 10), DRY compliance, zero technical debt. | `view_file`, `grep_search`, `send_message` | `PASS / REVISE` |
 | **`security-auditor`** | **Layer 2B (Verifier)** | Bunker | OWASP Top 10 defense, zero-trust sanitization, SQL Injection immunity, CSRF/XSS eradication, secret scanning, RBAC/IDOR checks. | `view_file`, `grep_search`, `run_command`, `send_message` | `PASS / REVISE` |
 | **`test-engineer`** | **Layer 2B (Verifier)** | QA Testing | Unit, integration & regression test suites, boundary condition coverage (minimum 80%), mock verification, empirical terminal assertions. | `view_file`, `grep_search`, `run_command`, `send_message` | `PASS / REVISE` |
-| **`performance-verifier`** | **Layer 2B (Verifier)** | Bunker / QA | Relational query execution plans (`EXPLAIN`), elimination of N+1 queries, memory leak auditing, p95 latency under 200ms. | `view_file`, `grep_search`, `run_command`, `send_message` | `PASS / REVISE` |
-| **`tech-writer-verifier`** | **Layer 2B (Verifier)** | Documentation | Technical walkthroughs with terminal proof, OpenAPI/Swagger specifications, handoff contracts, operator runbooks. | `view_file`, `grep_search`, `write_to_file`, `replace_file_content`, `send_message` | `PASS / REVISE` |
+| **`web-performance-auditor`**| **Layer 2B (Verifier)** | Bunker / QA | Core Web Vitals (LCP, INP, CLS), query performance, elimination of N+1 loops, memory leak auditing, p95 latency. | `view_file`, `grep_search`, `run_command`, `send_message` | `PASS / REVISE` |
+| **`anti-slop-ui-auditor`** | **Layer 2B (Verifier)** | QA Lab | Audits the 20 Canonical Anti-Slop Zones, design system adherence, WCAG 2.1 AA accessibility, issues official scorecards (0-100). | `view_file`, `grep_search`, `send_message` | `PASS / REVISE` |
 
 ---
 
@@ -241,7 +243,7 @@ The Foundry provides 18 standardized procedures accessible via `/slash` commands
 | **`/gates-check`** | Deterministic Gates Acceptance | `foundry-builder` | Runs all 6 terminal acceptance commands, halting on any non-zero exit code. |
 | **`/walkthrough`** | Homologation Walkthrough Report | `tech-writer-verifier` | Compiles `walkthrough.md` with terminal evidence, carousels, and checklists. |
 | **`/cockpit-telemetry`** | Cockpit Health & Stream Status | `foundry-builder` | Validates SSE stream integrity at port 4444 and monitors brain transcripts. |
-| **`/backend-scaffold`** | Typed Enterprise Backend Scaffold | `backend-engineer` | Scaffolds REST controllers, DTOs, and PDO repositories with strict ACID locks. |
+| **`/backend-scaffold`** | Typed Enterprise Backend Scaffold | `backend-engineer` | Scaffolds REST controllers, DTOs, and repositories with strict parameterized queries and ACID locks. |
 | **`/frontend-component`**| Reactive UI Component Builder | `software-engineer` | Builds responsive, accessible UI components adhering to the 20 Anti-Slop rules. |
 | **`/database-migration`**| Idempotent DDL Migration with Down| `backend-engineer` | Generates safe `IF NOT EXISTS` DDL migrations with automated rollback scripts. |
 | **`/code-review`** | Multi-Agent Peer Review | `code-reviewer` | Compiles detailed diff review tables with `APPROVED` or `CHANGES_REQUESTED`. |
@@ -333,16 +335,69 @@ To equip any existing codebase with the Antigravity Foundry engine:
 
 ---
 
-## 📚 9. Documentation Index
+---
+
+## 🛠️ 9. Customization & Adaptation Guide
+
+While Antigravity Foundry is **100% plug-and-play and zero-config** for immediate usage across any codebase, its true enterprise superpower is its **modular adaptability**:
+
+- **Agnostic by Design:** Use it out of the box with Node/TypeScript, Python, Go, Rust, Java, C#, or PHP.
+- **Tailor Your Team's Rules (`.agents/rules/`):** Inject your brand color palette into `02_design_system_and_anti_slop.md` and define team-specific architectural invariants into `01_core_architecture_rules.md`.
+- **Customize Workers for Your Stack (`.agents/subagents/workers/`):**
+  - Adapt `backend-engineer.md` for FastAPI/SQLAlchemy, NestJS/Prisma, Go/Gin/pgx, or Laravel.
+  - Adapt `frontend-engineer.md` for Next.js (App Router), Vue/Nuxt, SvelteKit, or Tailwind CSS.
+- **Wire Verifiers to Your Live CI Tools (`.agents/subagents/verifiers/`):** Instruct `test-engineer` and `code-reviewer` to execute your actual test runners (`npm test`, `pytest`, `cargo test`, `go test`) and linters (`eslint`, `ruff`, `golangci-lint`).
+- **Create Domain-Specific Skills (`.agents/skills/`):** Package proprietary business logic (e.g., Stripe/PIX payments, KYC flows, OAuth2, multi-tenant isolation) into self-contained reusable skill packages.
+- **Personalize the 2D Cockpit (`cockpit/`):** Rename stations, adjust agent colors/badges, and configure custom office sprites.
+
+👉 **Complete Step-by-Step Manual:** Read [**`docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md`**](docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md) for ready-to-use recipes.
+
+---
+
+## 🏛️ 10. Foundational Inspirations & Canonical References
+
+Antigravity Foundry stands on the shoulders of open-source giants. We proudly attribute and trace our core architectural pillars to the following groundbreaking projects:
+
+### Visual Multi-Agent Harnesses & Cockpit
+- [`chaitanyagiri/munder-difflin`](https://github.com/chaitanyagiri/munder-difflin) (`munderdiffl.in`): The primordial 2D retro pixel-art office simulation, live agent wandering, and the Single-Committer architectural pattern.
+- [`herdrdev/herdr`](https://github.com/herdrdev/herdr): Asynchronous session multiplexer and daemon background scheduler for autonomous agent swarms.
+- [`ustoppble/overclick`](https://github.com/ustoppble/overclick): Autonomous task boards, MCP token telemetry, and step tracking.
+
+### SDLC Governance, Socratic Protocols & Prompt Engineering
+- [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills): Addy Osmani (Google Chrome) — Spec-Driven Development (SDD), formal implementation plans, and gated milestone delivery.
+- [`mattpocock/skills`](https://github.com/mattpocock/skills): Matt Pocock — The Socratic *Grill-Me Protocol* interrogating edge cases, RBAC, and acceptance criteria before code is written.
+- [`multica-ai/andrej-karpathy-skills`](https://github.com/multica-ai/andrej-karpathy-skills): Andrej Karpathy — The 4 Behavioral Laws (*Think Before Coding, Simplicity First / YAGNI, Surgical Changes, Goal-Driven Execution*).
+- **Robert C. Martin (Uncle Bob):** *Clean Code* & *Clean Architecture* — Single Responsibility Principle, self-documenting code, and zero side-effects.
+- [`Leonxlnx/unlazy`](https://github.com/Leonxlnx/unlazy): Deterministic completion discipline via runnable gate contracts (`GATES.md`) with exit code `0` validation.
+
+### Design System & AI Slop Eradication
+- [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill), [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) & [`petergyang/no-ai-slop`](https://github.com/petergyang/no-ai-slop): The canonical 20 anti-slop guardrails (banishing purple-to-blue gradients, neon borders, header emojis, blurred glassmorphism; enforcing solid buttons and tabular numerals).
+- [`thedaviddias/Front-End-Checklist`](https://github.com/thedaviddias/Front-End-Checklist): David Dias — Web quality checklist, semantic HTML5, and WCAG 2.1 AA accessibility.
+- [`bradtraversy/design-resources-for-developers`](https://github.com/bradtraversy/design-resources-for-developers): Brad Traversy — Curated Swiss typography, solid corporate palettes, and local asset packaging.
+
+### Specialist Agent Matrix, Resilience & Memory
+- [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents): Maciej Sitarzewski — Structured Markdown persona taxonomy for AI agents.
+- [`roedyrustam/vibes-plug`](https://github.com/roedyrustam/vibes-plug): Hierarchical agent orchestration and structured handoff reports.
+- [`VoltAgent/skills`](https://github.com/VoltAgent/skills): Error boundaries, graceful degradation, and 3-round closed-loop circuit breakers.
+- [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem): Multi-layer persistent memory and progressive context disclosure.
+- [`huytieu/COG-second-brain`](https://github.com/huytieu/COG-second-brain): Cognitive lifecycle linking agent reasoning, Obsidian vaults, and git tracking.
+
+👉 **Complete Hall of Fame Compendium:** Read [**`docs/00_FOUNDATIONAL_REFERENCES.md`**](docs/00_FOUNDATIONAL_REFERENCES.md) for full attribution narratives and traceability matrices.
+
+---
+
+## 📚 11. Documentation Index
 
 The repository includes a comprehensive, modular documentation suite located in the [`docs/`](docs/) and [`templates/`](templates/) directories:
 
 ### Core Technical Handbooks
+- **[`docs/00_FOUNDATIONAL_REFERENCES.md`](docs/00_FOUNDATIONAL_REFERENCES.md)**: Official Hall of Fame compendium, open-source lineage, and traceability matrix.
 - **[`docs/01_ARCHITECTURE.md`](docs/01_ARCHITECTURE.md)**: Deep dive into the Dual-Layer mental model, orchestration mechanics, and role segregation.
 - **[`docs/02_THE_GATED_SDLC.md`](docs/02_THE_GATED_SDLC.md)**: Detailed breakdown of the 5 phases of The Fused Method, gate contracts, and exit criteria.
-- **[`docs/03_AGENT_MATRIX.md`](docs/03_AGENT_MATRIX.md)**: Complete profiles for all 9 subagents, authorized tools, and prompt architectures.
+- **[`docs/03_AGENT_MATRIX.md`](docs/03_AGENT_MATRIX.md)**: Complete profiles for all subagents, authorized tools, and prompt architectures.
 - **[`docs/04_SKILLS_CATALOG.md`](docs/04_SKILLS_CATALOG.md)**: Exhaustive manual for all 18 universal `/slash` skills with syntax examples.
 - **[`docs/05_COCKPIT_GUIDE.md`](docs/05_COCKPIT_GUIDE.md)**: Operator runbook for the 2D Pixel Art Cockpit, Web Audio synthesizer, and SSE telemetry.
+- **[`docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md`](docs/06_ADAPTATION_AND_CUSTOMIZATION_GUIDE.md)**: Definitive guide to customizing rules, workers, verifiers, and skills for your stack.
 
 ### Enterprise Governance Templates
 - **[`templates/implementation_plan_template.md`](templates/implementation_plan_template.md)**: Canonical specification plan for new features.
@@ -352,7 +407,7 @@ The repository includes a comprehensive, modular documentation suite located in 
 
 ---
 
-## 👤 10. Author, Community & License
+## 👤 12. Author, Community & License
 
 **Antigravity Foundry** is crafted with architectural discipline by **Douglas** ([@mrcodingdev](https://github.com/mrcodingdev)).
 

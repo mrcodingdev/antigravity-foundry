@@ -30,7 +30,7 @@ O **Método Fundido de Trabalho** é a fusão de elite dos 6 maiores pilares de 
    [ ETAPA 2: SPEC OSMANI ] ──► Geração do implementation_plan.md formal (Addy Osmani).
              │                 (Arquitetura, tabelas SQL, boundaries Always/Ask/Never e WBS Tasks).
              ▼
-   [ ETAPA 3: WORKER BACKEND ] ──► Subagente @backend-engineer constrói lógica PHP 8.2, PDO e SQL.
+   [ ETAPA 3: WORKER BACKEND ] ──► Subagente @backend-engineer constrói a lógica de servidor, APIs, persistência de banco de dados (ex: Node/TypeScript, Python, Go, PHP, Rust) e emite o Relatório de Contrato de Handoff.
              │                     (Emite o Relatório de Contrato de Handoff com variáveis).
              ▼
    [ ETAPA 4: WORKER FRONTEND ] ──► Subagente @frontend-engineer consome o contrato e monta a UI.
@@ -55,10 +55,10 @@ O **Método Fundido de Trabalho** é a fusão de elite dos 6 maiores pilares de 
 
 ### 🎯 ETAPA 1: BATERIA GRILL-ME (MATT POCOCK)
 Antes de abrir qualquer arquivo ou escrever código, o assistente DEVE formular uma bateria de perguntas socráticas cobrindo:
-1. **Dados & Casos de Borda:** Como tratar nulos, vazios, estoque zero, CPF não informado, falha de rede ou datas passadas.
-2. **RBAC & Permissões:** O que o Administrador faz vs o que o Operador de Caixa visualiza (Caixa NUNCA vê margem ou custo).
+1. **Dados & Casos de Borda:** Como tratar nulos, vazios, estoque zero, CPF/CNPJ não informado, falha de rede ou datas passadas.
+2. **RBAC & Permissões:** Perfis de Acesso & RBAC: Segregação rigorosa de privilégios (usuários não-privilegiados nunca visualizam dados sensíveis ou margens confidenciais).
 3. **Design System:** Botões sólidos de fábrica, classes `.tabular-nums`, topbar limpa e ausência de AI Slop.
-4. **Critérios Objetivos de Sucesso:** Qual script PHP CLI comprovará que a tela está 100% funcional.
+4. **Critérios Objetivos de Sucesso:** Qual script ou suíte de testes de terminal (CLI) comprovará que o módulo está 100% funcional.
 
 ---
 
@@ -67,8 +67,8 @@ Com as respostas do Grill-Me, gerar o arquivo de planejamento formal (`implement
 * **Objective:** Descrição executiva da funcionalidade ou refatoração.
 * **Project Structure:** Lista exata de arquivos modificados ou criados.
 * **Boundaries (Always / Ask First / Never):**
-  - *Always:* Botões sólidos, PDO Prepared Statements, CSRF tokens, `tabular-nums`.
-  - *Ask First:* Alterações de schema no `mrstock_db`, novas dependências.
+  - *Always:* Botões sólidos, Prepared Statements / ORM seguro, CSRF tokens, `tabular-nums`.
+  - *Ask First:* Alterações de schema no banco de dados, novas dependências.
   - *Never:* O Agente Pai escrever código de aplicação sem autorização prévia por `ask_question`.
 * **Task Breakdown (WBS):** Tarefas atômicas sequenciais numeradas.
 
@@ -86,7 +86,7 @@ Com as respostas do Grill-Me, gerar o arquivo de planejamento formal (`implement
 
 ### 🔍 ETAPA 5: BATERIA DE AUDITORIA MULTICAMADAS & LOOP FECHADO (ZERO-ESCAPE QUALITY GATE)
 Todo código produzido pelos Workers passa obrigatoriamente pelos 6 Gatekeepers:
-* **`@enterprise-architect`:** Valida integridade do domínio de negócio, modelagem de dados e governança (ex. didático: regras fiscais, NFC-e, trava de margem de lucro e DRE).
+* **`@enterprise-architect`:** Valida integridade do domínio de negócio, modelagem de dados e governança (ex. didático: regras de faturamento, integridade de transações, segregação de privilégios e auditoria contábil).
 * **`@code-reviewer`:** Audita nos 5 Eixos (Corretude, Legibilidade, Arquitetura, Segurança OWASP e Performance).
 * **`@anti-slop-ui-auditor`:** Audita as 20 Zonas de Blindagem Visual e emite Scorecard Oficial (0 a 100) com WCAG 2.1 AA.
 * **`@test-engineer`:** Escreve e roda suíte de testes de prova real via terminal CLI (unitários, integração e carga K6).

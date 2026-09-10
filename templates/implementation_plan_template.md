@@ -164,7 +164,7 @@ interface CriarRecursoRequest {
   - [ ] Nomenclatura explícita em inglês (ou convenção do projeto) sem abreviações crípticas.
   - [ ] Complexidade ciclomática < 10 por função; zero código duplicado (DRY).
 - [ ] **3. Security Auditor Verifier**
-  - [ ] OWASP Top 10 verificado: Zero injeção SQL (PDO preparado estrito), sanitização de inputs.
+  - [ ] OWASP Top 10 verificado: Zero injeção SQL (queries parametrizadas estritas / ORM seguro), sanitização de inputs.
   - [ ] Proteção contra XSS em todas as saídas e cabeçalhos de segurança HTTP.
   - [ ] RBAC validado no backend (nunca confiar apenas no bloqueio de UI).
 - [ ] **4. Test Engineer Verifier**

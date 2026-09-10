@@ -87,7 +87,7 @@ class OfficeSprites {
 
   createCarpetGovernance() {
     const { canvas, ctx } = this.createCanvas(32, 32);
-    // Carpete Verde Nobre Papelaria Real (#152e22 com borda #284936)
+    // Carpete Verde Nobre Emerald Executive (#152e22 com borda #284936)
     ctx.fillStyle = '#152e22';
     ctx.fillRect(0, 0, 32, 32);
 
@@ -401,7 +401,7 @@ class OfficeSprites {
 
   createPottedPlant() {
     const { canvas, ctx } = this.createCanvas(24, 32);
-    // Folhagem verde Papelaria Real
+    // Folhagem verde Emerald Bonsai
     ctx.fillStyle = '#15803d';
     ctx.fillRect(4, 2, 16, 14);
     ctx.fillStyle = '#22c55e';

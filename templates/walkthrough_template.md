@@ -45,7 +45,7 @@ PASS tests/unit/domain_service.test.js
     ✔ deve rejeitar concorrência simultânea sem corrupção (22 ms)
     ✔ deve disparar evento outbox de forma idempotente (8 ms)
 
-PASS tests/integration/database_pdo.test.js
+PASS tests/integration/database_transactions.test.js
   Suite de Banco de Dados & Concorrência
     ✔ deve executar lock pessimista com SELECT FOR UPDATE (45 ms)
     ✔ deve reverter transação atomicamente em caso de exceção (18 ms)

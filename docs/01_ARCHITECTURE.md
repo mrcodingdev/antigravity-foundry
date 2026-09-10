@@ -87,16 +87,16 @@ flowchart TB
 #### A. Os 3 Workers de Construção (Execution Pipeline)
 1. **`foundry-builder`:** O arquiteto construtor de elite. Constrói módulos de ponta a ponta, gerencia ambientes de infraestrutura, compilações e scripts de inicialização do ecossistema.
 2. **`software-engineer`:** O especialista full-stack. Implementa interfaces, componentes reativos, regras de negócio front-end e integrações de consumo de API.
-3. **`backend-engineer`:** O especialista de persistência e núcleo de dados. Escreve queries PDO parametrizadas, gerencia transações ACID, locks pessimistas e controllers RESTful desacoplados.
+3. **`backend-engineer`:** O especialista de persistência e núcleo de dados. Escreve queries parametrizadas e seguras, gerencia transações ACID, locks concorrentes e controllers RESTful desacoplados.
 
 #### B. Os 6 Verifiers Gatekeepers (Independent Audit Pipeline)
 Nenhum código entra na base sem o crivo unânime de 6 auditores com papéis rigidamente segregados:
-1. **`chief-erp-architect`:** Garante conformidade com o Pentágono Sagrado de Governança, as 4 Leis de Karpathy e documenta novas decisões em ADRs.
+1. **`enterprise-architect`:** Garante conformidade com o Pentágono Sagrado de Governança, as 4 Leis de Karpathy e documenta novas decisões em ADRs.
 2. **`code-reviewer`:** Impõe Clean Code, nomenclaturas autoexplicativas, limites de complexidade ciclomática e erradicação de código duplicado.
 3. **`security-auditor`:** Avalia o código sob as diretrizes OWASP Top 10, sanitização rigorosa de inputs, imunidade a SQL Injection, XSS e quebra de controle de acesso (IDOR).
 4. **`test-engineer`:** Valida que testes automatizados cobrem os cenários limites (edge cases) e que a prova real em terminal foi executada com êxito.
-5. **`performance-verifier`:** Inspeciona planos de execução de queries (`EXPLAIN`), elimina consultas N+1 e audita gargalos no Event Loop ou contenção de I/O.
-6. **`tech-writer-verifier`:** Assegura que especificações OpenAPI/Swagger, contratos de handoff e walkthroughs de homologação reflitam com fidelidade o código entregue.
+5. **`web-performance-auditor`:** Inspeciona planos de execução de queries (`EXPLAIN`), elimina consultas N+1 e audita Core Web Vitals e contenção de I/O.
+6. **`anti-slop-ui-auditor`:** Assegura que interfaces respeitem o Design System Anti-Slop, acessibilidade WCAG 2.1 AA e contratos de handoff de interface.
 
 ---
 

@@ -81,7 +81,7 @@ Executar a construção do código de forma isolada, limpa e focada exclusivamen
 ### 4.2 Alocação de Especialistas
 - **`foundry-builder`:** Configuração de build, scripts de automação, pipelines e infraestrutura.
 - **`software-engineer`:** Componentização visual, gerenciamento de estado na UI e chamadas de API.
-- **`backend-engineer`:** Migrações DDL, domain services, queries PDO parametrizadas e controllers REST.
+- **`backend-engineer`:** Migrações DDL, domain services, queries parametrizadas seguras e controllers REST/APIs.
 
 ### 4.3 Regra de Imutabilidade de Contrato
 O worker está expressamente proibido de alterar o contrato de handoff unilateralmente. Se durante a implementação for descoberta a necessidade de alterar campos ou endpoints:

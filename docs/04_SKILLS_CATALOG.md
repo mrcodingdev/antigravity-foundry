@@ -88,7 +88,7 @@ graph TD
 - **Nome Oficial:** Auditoria Defensiva OWASP Top 10 & Zero-Trust
 - **Gatilho Contextual:** Antes de qualquer liberação de endpoint ou rotina de persistência.
 - **Agente Responsável:** `security-auditor`
-- **Descrição:** Analisa vulnerabilidades como SQL Injection (checando PDO com prepared statements estritos), sanitização contra XSS, CSRF, validação de tokens e IDOR.
+- **Descrição:** Analisa vulnerabilidades como SQL Injection (checando queries parametrizadas estritas ou ORM seguro), sanitização contra XSS, CSRF, validação de tokens e IDOR.
 - **Exemplo de Uso:**
   ```text
   /cybersecurity-audit "Revisão geral dos endpoints da pasta /api/v1/pedidos"
@@ -160,7 +160,7 @@ graph TD
 - **Nome Oficial:** Scaffold de Estruturas Backend Seguras e Tipadas
 - **Gatilho Contextual:** Necessidade de criar um novo domínio com rotas, services e repositories.
 - **Agente Responsável:** `backend-engineer`
-- **Descrição:** Gera controllers RESTful, DTOs de validação e repositórios com PDO parametrizado respeitando o padrão arquitetural do projeto.
+- **Descrição:** Gera controllers RESTful, DTOs de validação e repositórios com queries parametrizadas seguras respeitando o padrão arquitetural do projeto.
 - **Exemplo de Uso:**
   ```text
   /backend-scaffold "Entidade Produto: id, sku, nome, preco, estoque"

@@ -19,7 +19,7 @@ Para qualquer refatoração, nova funcionalidade ou correção de bug de média/
 # Gates: [Nome da Funcionalidade / Módulo]
 
 - [ ] G1: [Descrição inequívoca do critério de aceitação]
-  CHECK: [Comando de terminal determinístico, ex: php tests/validar_calculo.php]
+  CHECK: [Comando de terminal determinístico, ex: npm test, pytest, go test ./..., ou script de validação CLI]
   EXPECT: [Saída em texto esperada exata ou código de saída 0]
   CWD: [Diretório de execução do comando]
   EVIDENCE: pending
