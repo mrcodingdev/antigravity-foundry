@@ -1,16 +1,16 @@
-# 🏛️ Compêndio de Referências Fundacionais & Hall da Fama (60 Tecnologias)
+# 🏛️ Compêndio de Referências Fundacionais & Hall da Fama (66 Tecnologias)
 # 00_FOUNDATIONAL_REFERENCES.md
 
 > *"Se vi mais longe, foi por estar sobre os ombros de gigantes."*  
 > — **Isaac Newton**
 
-O **Antigravity Foundry** não nasceu do acaso ou no vácuo tecnológico. Ele é a culminação de uma profunda pesquisa de engenharia reversa, síntese arquitetural e consolidação empírica de **60 dos projetos, repositórios, ferramentas e frameworks mais influentes do planeta** nos campos de Inteligência Artificial Agêntica, Arquitetura de Sistemas, Cibersegurança Ofensiva/Defensiva, Model Context Protocol (MCP), Core Web Vitals e Design de Interfaces de Alta Performance.
+O **Antigravity Foundry** não nasceu do acaso ou no vácuo tecnológico. Ele é a culminação de uma profunda pesquisa de engenharia reversa, síntese arquitetural e consolidação empírica de **66 dos projetos, repositórios, ferramentas e frameworks mais influentes do planeta** nos campos de Inteligência Artificial Agêntica, Arquitetura de Sistemas, Cibersegurança Ofensiva/Defensiva, Model Context Protocol (MCP), Core Web Vitals e Design de Interfaces de Alta Performance.
 
-Este documento cataloga exaustivamente **cada uma das 60 referências** que formaram a base do Antigravity Foundry, agrupadas cronológica e metodologicamente em **7 Levas de Pesquisa e Síntese Arquitetural**.
+Este documento cataloga exaustivamente **cada uma das 66 referências** que formaram a base do Antigravity Foundry, agrupadas cronológica e metodologicamente em **8 Levas de Pesquisa e Síntese Arquitetural**.
 
 ---
 
-## 🧭 Sumário das 7 Levas de Pesquisa
+## 🧭 Sumário das 8 Levas de Pesquisa
 
 | Leva | Domínio Técnico | Qtd. | Escopo Primordial |
 | :---: | :--- | :---: | :--- |
@@ -21,7 +21,8 @@ Este documento cataloga exaustivamente **cada uma das 60 referências** que form
 | **Leva 5** | Servidores MCP de Alta Performance | 7 | Auditoria de rede, PageSpeed, SEO, AST Tree-Sitter e asserção de APIs |
 | **Leva 6** | Ecossistema Corporativo, Fiscal & Agentes | 5 | Arquiteturas transacionais enxutas, antifraude, personas e No-Slop textual |
 | **Leva 7** | Engenharia Documental e Automação Office | 1 | Automação CLI headless de `.docx`, `.xlsx`, `.pptx` para relatórios de auditoria |
-| **TOTAL** | **Ecossistema Completo do Foundry** | **60** | **A Maior Infraestrutura Unificada de Engenharia de IA do Mercado** |
+| **Leva 8** | Contexto em Tempo Real, AI UX Patterns & Design Engineering | 6 | MCP Context7, Transitions CSS, MarketingSkills, Social-Media Voice, UI-Skills e Shape of AI |
+| **TOTAL** | **Ecossistema Completo do Foundry** | **66** | **A Maior Infraestrutura Unificada de Engenharia de IA do Mercado** |
 
 ---
 
@@ -372,7 +373,7 @@ Esta leva conferiu ao Foundry a capacidade soberana de manipulação documental 
 
 ## 📊 Matriz de Rastreabilidade Completa das 60 Tecnologias
 
-A tabela a seguir consolida a correspondência direta e inequívoca entre cada uma das 60 referências mundiais e os respectivos módulos, subagentes, skills e regras do ecossistema **Antigravity Foundry**:
+A tabela a seguir consolida a correspondência direta e inequívoca entre cada uma das 66 referências mundiais e os respectivos módulos, subagentes, skills e regras do ecossistema **Antigravity Foundry**:
 
 | # | Tecnologia / Repositório | Autor / Organização | Módulo / Artefato no Antigravity Foundry |
 | :---: | :--- | :--- | :--- |
@@ -436,11 +437,56 @@ A tabela a seguir consolida a correspondência direta e inequívoca entre cada u
 | **58** | `open-seo` | Every App | Auditoria de metadados semânticos e integridade de sitemaps |
 | **59** | `agency-agents` | Maciej Sitarzewski | Taxonomia das personas dos 10 subagentes em `.agents/subagents/` |
 | **60** | `OfficeCLI` | iOfficeAI | Automação CLI headless de `.docx`, `.xlsx` e `.pptx` para laudos executivos |
+| **61** | `transitions.dev` | Jakub Antalik | 12 transições CSS atômicas e microinterações puras para interfaces |
+| **62** | `context7` | Upstash | Servidor MCP para injeção de documentações oficiais ao vivo na versão exata |
+| **63** | `marketingskills` | Corey Haines | 45 skills integradas com âncora `product-marketing` para GTM, SEO e CRO |
+| **64** | `social-media-skills` | Charlie Hills | 17 skills com protocolo `voice-builder` para preservação da voz do autor |
+| **65** | `ui-skills` | Julien Pradet (@ibelick) | Catálogo comunitário de design engineering para coding agents |
+| **66** | `shapeof.ai` | Shape of AI Team | Taxonomia canônica de 6 zonas de UX Patterns para produtos com IA |
+
+---
+
+
+---
+
+## 📦 LEVA 8: Contexto em Tempo Real, AI UX Patterns & Design Engineering (61 a 66)
+
+Esta leva expande o ecossistema com tecnologias consolidadas de injeção de documentação em tempo de execução, microinterações CSS atômicas, taxonomia de experiência do usuário para IA e orquestração de marketing/conteúdo.
+
+### 61. [`Jakubantalik/transitions.dev`](https://github.com/Jakubantalik/transitions.dev)
+* **Autor / Organização:** Jakub Antalik (Designer & Creative Developer)
+* **Conceito Primordial:** 12 microinterações e transições atômicas em CSS puro namespaced (`t-*`), aceleradas por GPU, com CLI oficial (`npx transitions-dev add`) e zero dependência de runtime JS.
+* **Absorção no Foundry:** Fornece o catálogo canônico de microinterações táteis integradas à skill `frontend-ui-engineering` e ao Cockpit 2D.
+
+### 62. [`upstash/context7`](https://github.com/upstash/context7)
+* **Autor / Organização:** Upstash
+* **Conceito Primordial:** Servidor MCP oficial (`@upstash/context7-mcp`) para injeção dinâmica de documentações oficiais atualizadas na versão exata das bibliotecas em tempo de execução via diretiva `use context7`.
+* **Absorção no Foundry:** Erradicação de alucinações de APIs depreciadas no `@backend-engineer` e `@frontend-engineer`.
+
+### 63. [`coreyhaines31/marketingskills`](https://github.com/coreyhaines31/marketingskills)
+* **Autor / Organização:** Corey Haines (Swipe Files & Conversion Factory)
+* **Conceito Primordial:** Suíte de 45 skills integradas para coding agents com arquitetura de âncora canônica (`product-marketing`), unindo SEO técnico, CRO, copywriting e modelos de precificação.
+* **Absorção no Foundry:** Modelo arquitetural de dependência entre skills e base de Go-To-Market de software.
+
+### 64. [`charlie947/social-media-skills`](https://github.com/charlie947/social-media-skills)
+* **Autor / Organização:** Charlie Hills (MarTech AI)
+* **Conceito Primordial:** O protocolo `voice-builder` para geração de perfis de voz (`about-me.md` e `voice.md`), garantindo autenticidade e eliminando o tom artificial de IA em comunicações públicas.
+* **Absorção no Foundry:** Diretrizes de escrita e personas para documentação corporativa e notas de lançamento.
+
+### 65. [`ui-skills.com`](https://www.ui-skills.com) / [`ibelick/ui-skills`](https://github.com/ibelick)
+* **Autor / Organização:** Julien Pradet (@ibelick)
+* **Conceito Primordial:** Catálogo aberto de skills de design engineering para coding agents (deslop com `baseline-ui`, auditoria WCAG 2.2 com `accesslint` e animação com `emilkowalski/animate`).
+* **Absorção no Foundry:** Complementa as regras do `@anti-slop-ui-auditor` com técnicas avançadas de refinamento de interface.
+
+### 66. [`shapeof.ai`](https://www.shapeof.ai)
+* **Autor / Organização:** Shape of AI Team
+* **Conceito Primordial:** A biblioteca canônica de Padrões de UX para Produtos com IA, categorizada em 6 zonas (Wayfinders, Prompt Actions, Tuners, Governors, Trust Builders e Identifiers).
+* **Absorção no Foundry:** Padronização da experiência de observabilidade, portões interativos de aprovação humana e indicadores de telemetria no Cockpit 2D.
 
 ---
 
 ## 🏛️ Conclusão: A Grande Convergência
 
-O Antigravity Foundry não busca reinventar conceitos fundamentais que gênios da engenharia já consolidaram. Nossa inovação reside na **Grande Síntese**: conectar e harmonizar essas 60 disciplinas em um motor coeso, unificado e determinístico. 
+O Antigravity Foundry não busca reinventar conceitos fundamentais que gênios da engenharia já consolidaram. Nossa inovação reside na **Grande Síntese**: conectar e harmonizar essas 66 disciplinas em um motor coeso, unificado e determinístico. 
 
 Ao unir o rigor socrático de Matt Pocock, as leis comportamentais de Andrej Karpathy, o SDD de Addy Osmani, o modelo visual Single-Committer de Chaitanya Giri, a disciplina executável de Leonxlnx e a sofisticação instrumental dos servidores MCP, o **Antigravity Foundry entrega o estado da arte absoluto em desenvolvimento assistido por agentes autônomos no planeta.**

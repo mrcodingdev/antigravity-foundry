@@ -380,7 +380,7 @@ While Antigravity Foundry is **100% plug-and-play and zero-config** for immediat
 
 ## 🏛️ 10. Foundational Inspirations: The Hall of Fame of 60 Technologies
 
-Antigravity Foundry stands on the shoulders of open-source giants. It consolidates **60 of the most influential repositories and projects worldwide** in agentic AI, software engineering, and cybersecurity, categorized across **7 Research Waves**:
+Antigravity Foundry stands on the shoulders of open-source giants. It consolidates **66 of the most influential repositories and projects worldwide** in agentic AI, software engineering, and cybersecurity, categorized across **7 Research Waves**:
 
 | Wave | Technical Domain | Qty | Canonical Highlights |
 | :---: | :--- | :---: | :--- |

@@ -378,7 +378,7 @@ Embora o Antigravity Foundry seja **100% plug-and-play e zero-config** para uso 
 
 ## 🏛️ 10. Inspirações Fundacionais: O Hall da Fama das 60 Tecnologias
 
-O Antigravity Foundry foi construído sobre os ombros de gigantes. Ele consolida **60 dos projetos e repositórios mais influentes do mundo** em IA agêntica, engenharia de software e cibersegurança, catalogados cronologicamente em **7 Levas de Pesquisa**:
+O Antigravity Foundry foi construído sobre os ombros de gigantes. Ele consolida **66 dos projetos e repositórios mais influentes do mundo** em IA agêntica, engenharia de software e cibersegurança, catalogados cronologicamente em **7 Levas de Pesquisa**:
 
 | Leva | Domínio Técnico | Qtd. | Destaques Canônicos |
 | :---: | :--- | :---: | :--- |
