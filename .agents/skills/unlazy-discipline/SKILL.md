@@ -1,12 +1,11 @@
 ---
 name: unlazy-discipline
-description: Protocolo de Disciplina Determinística de Conclusão com Portões Executáveis (Gate Contract / GATES.md), baseado no framework Leonxlnx/unlazy para o Antigravity Foundry (com casos didáticos corporativos).
+description: Protocolo de Disciplina Determinística de Conclusão com Portões Executáveis (Gate Contract / GATES.md), baseado no framework Leonxlnx/unlazy para o MrStock ERP.
 ---
 
 # 🚪 Skill: Unlazy Discipline & Runnable Gates (v2.2.0)
 
-Esta skill estabelece a disciplina inegociável de conclusão de tarefas substanciais para agentes de IA no ecossistema Antigravity Foundry:
-
+Esta skill estabelece a disciplina inegociável de conclusão de tarefas substanciais para agentes de IA no MrStock ERP:
 > **"Escreva o livro-razão de aceitação primeiro (`GATES.md`), execute verificações auditadas, re-verifique o trabalho entregue e relate apenas o que a evidência empírica suporta."**
 
 ---
@@ -19,7 +18,7 @@ Para qualquer refatoração, nova funcionalidade ou correção de bug de média/
 # Gates: [Nome da Funcionalidade / Módulo]
 
 - [ ] G1: [Descrição inequívoca do critério de aceitação]
-  CHECK: [Comando de terminal determinístico, ex: npm test, pytest, go test ./..., ou script de validação CLI]
+  CHECK: [Comando de terminal determinístico, ex: php tests/validar_calculo.php]
   EXPECT: [Saída em texto esperada exata ou código de saída 0]
   CWD: [Diretório de execução do comando]
   EVIDENCE: pending
@@ -37,9 +36,8 @@ Para qualquer refatoração, nova funcionalidade ou correção de bug de média/
 
 ---
 
-## 3. Aplicação no Fluxo de Desenvolvimento do Antigravity Foundry
+## 3. Aplicação no Fluxo de Desenvolvimento do MrStock ERP
 
 * **Fase de Planejamento (Método Fundido):** No `implementation_plan.md`, a seção de Plano de Verificação deve conter os portões executáveis em formato canônico.
 * **Fase de Execução (Workers):** O `@software-engineer` e o `@backend-engineer` executam os comandos dos portões após cada edição de arquivo.
 * **Fase de Auditoria (Verifiers):** Os 6 Gatekeepers utilizam os portões declarados como critério objetivo de aprovação `[ 🟢 PASS ]` ou rejeição `[ 🔴 REVISE ]`.
-

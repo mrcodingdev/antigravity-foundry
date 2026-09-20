@@ -1,19 +1,18 @@
 ---
 name: metodo-fundido
-description: Protocolo Mestre de Engenharia de Software do Antigravity Foundry (com casos didáticos de sistemas corporativos). Funde o Matt Pocock Grill-Me Protocol, Addy Osmani Gated SDLC, as 4 Leis de Andrej Karpathy, Clean Code de Uncle Bob Martin e a Esteira Rigorosa de Subagentes Especialistas (3 Workers + 6 Verifiers).
+description: Protocolo Mestre de Engenharia de Software do MrStock ERP. Funde o Matt Pocock Grill-Me Protocol, Addy Osmani Gated SDLC, as 4 Leis de Andrej Karpathy, Clean Code de Uncle Bob Martin e a Esteira Rigorosa de Subagentes Especialistas (3 Workers + 6 Verifiers).
 ---
 
-# ⚡ MÉTODO FUNDIDO DE TRABALHO (ENTERPRISE SDLC)
-**A Metodologia Oficial e Mandatória de Engenharia de Software do Antigravity Foundry**
+# ⚡ MÉTODO FUNDIDO DE TRABALHO (MRSTOCK ENTERPRISE SDLC)
+**A Metodologia Oficial e Mandatória de Engenharia de Software do MrStock ERP**
 
 O **Método Fundido de Trabalho** é a fusão de elite dos 6 maiores pilares de engenharia de software e inteligência artificial aplicada:
 1. **Matt Pocock Grill-Me Protocol (Phase 0):** Interrogatório socrático rigoroso antes de tocar em qualquer arquivo.
 2. **Addy Osmani Gated SDLC (Phase 1 & 2):** Especificação formal (`SPEC`), decomposição atômica de tarefas e aprovação de planos.
 3. **As 4 Leis de Andrej Karpathy:** Engenharia cirúrgica (*Think Before Coding*, *Simplicity First*, *Surgical Changes*, *Goal-Driven Execution*).
 4. **Uncle Bob Martin's Clean Code:** Princípios SOLID, funções atômicas de responsabilidade única e blindagem defensiva.
-5. **Esteira de Subagentes Workers (Phase 3):** Cláusula Pétrea — Orquestrador Maestro proibido de codificar; construção exclusiva por `@backend-engineer`, `@frontend-engineer` e `@software-engineer`.
-6. **Bateria Multicamadas de Verifiers & Gatekeepers (Phase 4):** Auditoria em 5 eixos por `@code-reviewer`, 20 Zonas por `@anti-slop-ui-auditor`, integridade corporativa por `@enterprise-architect`, testes automatizados por `@test-engineer`, cibersegurança por `@security-auditor` e web performance por `@web-performance-auditor`.
-
+5. **Esteira de Subagentes Workers (Phase 3):** Cláusula Pétrea #16 — Agente Pai proibido de codificar; construção exclusiva por `@backend-engineer`, `@frontend-engineer` e `@software-engineer`.
+6. **Bateria Multicamadas de Verifiers & Gatekeepers (Phase 4):** Auditoria em 5 eixos por `@code-reviewer`, 14 Zonas por `@anti-slop-ui-auditor`, regras fiscais por `@chief-erp-architect`, testes automatizados por `@test-engineer`, cibersegurança por `@security-auditor` e web performance por `@web-performance-auditor`.
 
 ---
 
@@ -30,23 +29,22 @@ O **Método Fundido de Trabalho** é a fusão de elite dos 6 maiores pilares de 
    [ ETAPA 2: SPEC OSMANI ] ──► Geração do implementation_plan.md formal (Addy Osmani).
              │                 (Arquitetura, tabelas SQL, boundaries Always/Ask/Never e WBS Tasks).
              ▼
-   [ ETAPA 3: WORKER BACKEND ] ──► Subagente @backend-engineer constrói a lógica de servidor, APIs, persistência de banco de dados (ex: Node/TypeScript, Python, Go, PHP, Rust) e emite o Relatório de Contrato de Handoff.
+   [ ETAPA 3: WORKER BACKEND ] ──► Subagente @backend-engineer constrói lógica PHP 8.2, PDO e SQL.
              │                     (Emite o Relatório de Contrato de Handoff com variáveis).
              ▼
    [ ETAPA 4: WORKER FRONTEND ] ──► Subagente @frontend-engineer consome o contrato e monta a UI.
-             │                     (Aplica Design System Oficial Anti-Slop, 100% botões sólidos e WCAG 2.1).
+             │                     (Aplica Design System Oficial MrStock ERP, 100% botões sólidos e WCAG 2.1).
              ▼
    [ ETAPA 5: VERIFIERS QA ] ──► Auditoria em Paralelo pelos 6 Gatekeepers:
-             │                   • @enterprise-architect (Governança, domínio, regras de negócio e dados).
-             │                   • @code-reviewer (5 Eixos: Correção, Segurança, Arquitetura, Legibilidade, Perf).
-             │                   • @anti-slop-ui-auditor (20 Zonas Anti-Slop, Scorecard 100/100, WCAG 2.1 AA).
+             │                   • @chief-erp-architect (Regras fiscais/varejo/lucro/DRE).
+             │                   • @code-reviewer (5 Eixos: Correção, Segurança, CSRF, BCrypt, RBAC).
+             │                   • @anti-slop-ui-auditor (14 Zonas Anti-Slop, Scorecard 100/100).
              │                   • @test-engineer (Execução de testes automatizados no terminal CLI).
-             │                   • @security-auditor (Defesa ativa OWASP Top 10 e Pentest Zero-Leak).
+             │                   • @security-auditor (Defesa ativa OWASP Top 10 e Pentest).
              │                   • @web-performance-auditor (Core Web Vitals e Latência).
              ▼
    [ ETAPA 6: WALKTHROUGH & GIT ] ──► Walkthrough.md com evidências de teste, Conventional Commit
-                                      semântico e push para o repositório oficial.
-
+                                      semântico, push para o GitHub e espelhamento no Google Drive.
 ```
 
 ---
@@ -55,10 +53,10 @@ O **Método Fundido de Trabalho** é a fusão de elite dos 6 maiores pilares de 
 
 ### 🎯 ETAPA 1: BATERIA GRILL-ME (MATT POCOCK)
 Antes de abrir qualquer arquivo ou escrever código, o assistente DEVE formular uma bateria de perguntas socráticas cobrindo:
-1. **Dados & Casos de Borda:** Como tratar nulos, vazios, estoque zero, CPF/CNPJ não informado, falha de rede ou datas passadas.
-2. **RBAC & Permissões:** Perfis de Acesso & RBAC: Segregação rigorosa de privilégios (usuários não-privilegiados nunca visualizam dados sensíveis ou margens confidenciais).
+1. **Dados & Casos de Borda:** Como tratar nulos, vazios, estoque zero, CPF não informado, falha de rede ou datas passadas.
+2. **RBAC & Permissões:** O que o Administrador faz vs o que o Operador de Caixa visualiza (Caixa NUNCA vê margem ou custo).
 3. **Design System:** Botões sólidos de fábrica, classes `.tabular-nums`, topbar limpa e ausência de AI Slop.
-4. **Critérios Objetivos de Sucesso:** Qual script ou suíte de testes de terminal (CLI) comprovará que o módulo está 100% funcional.
+4. **Critérios Objetivos de Sucesso:** Qual script PHP CLI comprovará que a tela está 100% funcional.
 
 ---
 
@@ -67,8 +65,8 @@ Com as respostas do Grill-Me, gerar o arquivo de planejamento formal (`implement
 * **Objective:** Descrição executiva da funcionalidade ou refatoração.
 * **Project Structure:** Lista exata de arquivos modificados ou criados.
 * **Boundaries (Always / Ask First / Never):**
-  - *Always:* Botões sólidos, Prepared Statements / ORM seguro, CSRF tokens, `tabular-nums`.
-  - *Ask First:* Alterações de schema no banco de dados, novas dependências.
+  - *Always:* Botões sólidos, PDO Prepared Statements, CSRF tokens, `tabular-nums`.
+  - *Ask First:* Alterações de schema no `mrstock_db`, novas dependências.
   - *Never:* O Agente Pai escrever código de aplicação sem autorização prévia por `ask_question`.
 * **Task Breakdown (WBS):** Tarefas atômicas sequenciais numeradas.
 
@@ -86,12 +84,12 @@ Com as respostas do Grill-Me, gerar o arquivo de planejamento formal (`implement
 
 ### 🔍 ETAPA 5: BATERIA DE AUDITORIA MULTICAMADAS & LOOP FECHADO (ZERO-ESCAPE QUALITY GATE)
 Todo código produzido pelos Workers passa obrigatoriamente pelos 6 Gatekeepers:
-* **`@enterprise-architect`:** Valida integridade do domínio de negócio, modelagem de dados e governança (ex. didático: regras de faturamento, integridade de transações, segregação de privilégios e auditoria contábil).
+* **`@chief-erp-architect`:** Valida integridade contábil, NFC-e, trava de margem de lucro e DRE.
 * **`@code-reviewer`:** Audita nos 5 Eixos (Corretude, Legibilidade, Arquitetura, Segurança OWASP e Performance).
-* **`@anti-slop-ui-auditor`:** Audita as 20 Zonas de Blindagem Visual e emite Scorecard Oficial (0 a 100) com WCAG 2.1 AA.
-* **`@test-engineer`:** Escreve e roda suíte de testes de prova real via terminal CLI (unitários, integração e carga K6).
-* **`@security-auditor`:** Defesa ativa OWASP Top 10, caça de vulnerabilidades, scanner de segredos e pentest.
-* **`@web-performance-auditor`:** Core Web Vitals (LCP, INP, CLS), latência de ponta a ponta e consumo de recursos.
+* **`@anti-slop-ui-auditor`:** Audita as 14 Zonas de Blindagem Visual e emite Scorecard Oficial (0 a 100).
+* **`@test-engineer`:** Escreve e roda suíte de testes de prova real via PHP CLI / terminal.
+* **`@security-auditor`:** Defesa ativa OWASP Top 10, caça de vulnerabilidades e testes dinâmicos de penetração.
+* **`@web-performance-auditor`:** Core Web Vitals (LCP, INP, CLS), latência de PDV e consumo de recursos.
 
 #### 🔄 O PROTOCOLO MANDATÓRIO DE RE-AUDITORIA EM LOOP FECHADO:
 1. **Regra de Ouro:** Se QUALQUER Verifier emitir rejeição (`[ 🔴 FAIL ]` ou `[ 🔴 REVISE ]`), o Agente Pai re-aciona a esteira de Workers especialistas (`backend-engineer` ➔ `frontend-engineer`) para corrigir todos os pontos da Punch List.
@@ -105,8 +103,7 @@ Todo código produzido pelos Workers passa obrigatoriamente pelos 6 Gatekeepers:
 
 ### 🚀 ETAPA 6: DOCUMENTAÇÃO, VERSIONAMENTO E PUSH (KARPATHY + CONVENTIONAL COMMITS)
 1. Geração do `walkthrough.md` com evidências de teste, notas dos auditores e instruções de validação.
-2. Verificação pelo scanner pré-commit (`python .agents/scripts/pre_commit_secrets_shield.py`).
-3. Execução de `git commit -m "<tipo>(<escopo>): <descrição>"` seguindo Conventional Commits semânticos.
-4. `git push origin main` para o repositório oficial do projeto.
-
+2. Execução de `git commit -m "<tipo>(<escopo>): <descrição>"` seguindo Conventional Commits semânticos.
+3. `git push origin main` imediato para o repositório oficial (`mrcodingdev/mrstock-erp`).
+4. Espelhamento automático para `G:\Meu Drive\TCC_MrStock\`.
 

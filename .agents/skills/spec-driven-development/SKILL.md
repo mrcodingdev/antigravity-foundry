@@ -15,7 +15,7 @@ This enhanced version integrates **Addy Osmani's 4-Phase Gated SDLC** with **Mat
 
 ## When to Use
 
-- Starting a new project, page, or feature (e.g., checkout flow, financial ledger, analytics dashboard, RBAC permissions).
+- Starting a new project, page, or feature (e.g., PDV checkout, NFC-e modal, Curva ABC dashboard).
 - Requirements are ambiguous, incomplete, or only exist as a high-level request.
 - The change touches multiple files, SQL tables, or architectural layers.
 - You're about to make a significant design or database decision.
@@ -46,23 +46,22 @@ Before writing any document or code, activate the **Grill-Me Protocol**. Assume 
 
 1. 📊 Dados & Casos de Borda (Data & Edge Cases):
    - O que acontece se o valor for zero, negativo ou nulo?
-   - Como o sistema se comporta se o item estiver com estoque zerado ou indisponível?
-   - O que ocorre se a conexão com o banco de dados ou gateway de pagamento oscilar durante a transação?
+   - Como o sistema se comporta se o produto estiver com estoque zerado no balcão?
+   - O que ocorre se a conexão com o banco ou com a SEFAZ oscilar durante a operação?
 
 2. 🔐 Regras de Negócio & Permissões (RBAC & Business Rules):
-   - Essa ação pode ser feita por usuários operacionais comuns ou exige privilégios de Administrador?
-   - Usuários sem privilégios visualizam custos internos ou margens? (Exemplo didático de RBAC: NUNCA sem autorização executiva).
-   - Há trava contra operações duplicadas (idempotência) ou venda com inconsistência de saldo?
+   - Essa ação pode ser feita pelo perfil Caixa ou exige liberação do Administrador?
+   - O Caixa visualiza margem de lucro ou custo de compra? (Regra MrStock: NUNCA).
+   - Há trava contra desconto abusivo ou venda com prejuízo?
 
 3. 🎨 Design System & Restrições de UI (Anti-Slop Boundaries):
-   - O layout respeita as regras de Design System Anti-Slop (Botões Sólidos, sem outline)?
-   - A tela é 100% navegável por teclado (:focus-visible) em formulários e telas operacionais?
-   - Os valores numéricos e monetários usam font-variant-numeric: tabular-nums?
+   - O layout respeita a Regra #1 do GEMINI.md (Botões Sólidos de Fábrica, sem outline)?
+   - A tela é 100% navegável por teclado (:focus-visible) no PDV?
+   - Os valores monetários usam font-variant-numeric: tabular-nums?
 
 4. 🏁 Critérios Objetivos de Sucesso (Acceptance Criteria):
-   - Qual comando ou teste automatizado de terminal comprovará que o módulo está 100% pronto?
-   - Como validamos visualmente a mudança antes de tocar em diretórios estáveis de produção?
-
+   - Qual comando ou teste automatizado comprovará que a tela está 100% pronta?
+   - Como validamos visualmente a mudança antes de tocar no MrStockBackup?
 ```
 
 > **Regra de Ouro:** Não avance para a escrita da especificação até que o humano tenha respondido ou validado as premissas do interrogatório!
@@ -73,23 +72,22 @@ Before writing any document or code, activate the **Grill-Me Protocol**. Assume 
 
 Com as respostas do interrogatório em mãos, gere o documento formal de especificação cobrindo as 6 áreas canônicas:
 
-1. **Objective:** O que estamos construindo e para quem (ex: *"Módulo de Fechamento de Vendas / Checkout Corporativo"*).
-2. **Commands:** Comandos executáveis exatos (ex: linters de código, testes automatizados, scripts de migração).
-3. **Project Structure:** Diretórios e arquivos afetados (ex: controllers, services, repositories, rotas, views).
-4. **Code Style & Design Tokens:** Snippet real demonstrando a sintaxe limpa (ex: tipagem forte, prepared statements estritos, botões sólidos corporativos).
+1. **Objective:** O que estamos construindo e para quem (ex: *"Tela de Fechamento de Caixa para a Papelaria Real"*).
+2. **Commands:** Comandos executáveis exatos (ex: `php -l index.php`, testes K6, migrations).
+3. **Project Structure:** Diretórios e arquivos afetados (ex: `pdv/index.php`, `inc/header.php`, `mrstock_db`).
+4. **Code Style & Design Tokens:** Snippet real demonstrando a sintaxe limpa (PHP 8.2 PDO, Bootstrap 5 sólido).
 5. **Testing Strategy:** Como o `test-engineer` e o `code-reviewer` auditarão o código.
 6. **Boundaries (Always / Ask First / Never):**
-   - **Always:** Usar botões sólidos, `tabular-nums`, prepared statements em queries.
-   - **Ask First:** Alterações em schemas de banco de dados, novas dependências externas.
-   - **Never:** Sobrescrever código de produção sem aprovação, usar botões transparentes com gradiente roxo (*AI Slop*).
-
+   - **Always:** Usar botões sólidos, `tabular-nums`, prepared statements no PDO.
+   - **Ask First:** Alterações no schema `mrstock_db`, novas dependências externas.
+   - **Never:** Sobrescrever `MrStockBackup` sem aprovação, usar botões transparentes com gradiente roxo (*AI Slop*).
 
 ---
 
 ## Phase 2: Plan (Technical Breakdown)
 
 Com a especificação aprovada, gere o plano técnico de implementação:
-- Mapeie dependências (o banco e migrations antes das regras de serviço; os serviços antes dos endpoints de API; a API antes da interface).
+- Mapeie dependências (o banco deve ser alterado antes da rota PHP; a API antes da interface).
 - Identifique pontos de risco e planos de contingência.
 - Defina os pontos de parada (*Checkpoints*) para validação visual no navegador.
 
@@ -103,10 +101,10 @@ Divida o plano em tarefas atômicas e independentes:
 - Cada tarefa possui um critério de verificação claro:
 
 ```markdown
-- [ ] Task 1: [Criar migration de banco de dados e repository seguro]
-  - Aceite: [Script de migração executado e testado localmente]
-  - Verificação: [Comando de checagem do schema no terminal]
-  - Arquivos: [migrations/001_create_orders.sql, src/repositories/order_repository.py]
+- [ ] Task 1: [Criar tabela/coluna no mrstock_db com script SQL]
+  - Aceite: [Script .sql executado e testado no MySQL local]
+  - Verificação: [DESCRIBE tabela no terminal]
+  - Arquivos: [sql/migrations/v2_update.sql]
 ```
 
 ---
@@ -116,4 +114,4 @@ Divida o plano em tarefas atômicas e independentes:
 Execute as tarefas uma por uma aplicando as skills do Núcleo Puro:
 - **`incremental-implementation`:** Entrega passo a passo sem quebrar o sistema.
 - **`clean-code`:** Código limpo e legível segundo princípios SOLID.
-- **Portão de Prova Real:** Executar a validação no terminal e realizar o commit semântico imediato (`git commit -m "feat(checkout): ..."`).
+- **Portão de Prova Real:** Executar a validação no terminal e realizar o commit semântico imediato (`git commit -m "feat(pdv): ..."`).

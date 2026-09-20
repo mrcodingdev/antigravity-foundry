@@ -322,14 +322,24 @@ For detailed accessibility requirements and testing tools, see `../../references
 - Color as the sole indicator of state (red/green without text or icons)
 - Generic "AI look" (purple gradients, oversized cards, stock layouts)
 
+## Front-End Checklist & Taste-Skill Standards (David Dias & Leonxlnx)
+
+Incorporate the mandatory standards from `frontendchecklist.io`:
+1. **Accessibility**: Skip links (`.so-skip-link` -> `#main-content`), ARIA live regions for dynamic data, `:focus-visible` with high contrast, semantic tables (`scope="col"`).
+2. **Performance**: Explicit `width`/`height` on `<img>` to prevent CLS, debounce on rapid input events, long-term asset caching.
+3. **Typography & Layout**: Clean solid buttons, `@media print` stylesheets for reports/receipts, zero glassmorphism, zero purple AI gradients, strict em-dash ban (`—`).
+4. **Robustness**: `<noscript>` fallbacks for transactional JS interfaces, `rel="noopener noreferrer"` on all `target="_blank"` links.
+
 ## Verification
 
 After building UI:
 
 - [ ] Component renders without console errors
+- [ ] Skip link exists and is functional for keyboard users
 - [ ] All interactive elements are keyboard accessible (Tab through the page)
 - [ ] Screen reader can convey the page's content and structure
 - [ ] Responsive: works at 320px, 768px, 1024px, 1440px
+- [ ] Print layout (`@media print`) cleans navigation and non-essential chrome
 - [ ] Loading, error, and empty states all handled
-- [ ] Follows the project's design system (spacing, colors, typography)
+- [ ] Follows the project's design system (spacing, colors, typography, solid buttons)
 - [ ] No accessibility warnings in dev tools or axe-core
